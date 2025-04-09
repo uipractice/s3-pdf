@@ -1,0 +1,52 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  text-align: left;
+  overflow: hidden;
+}
+
+.card-image {
+  height: 150px;
+  background-color: #f0f0f0;
+  border-radius: 10px 10px 0 0;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 15px 20px 10px;
+  color: #333;
+}
+
+.card p {
+  color: #666;
+  font-size: 14px;
+  margin: 0 20px 15px;
+  line-height: 1.5;
+}
+
+.card button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 20px 20px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.card button::after {
+  content: '→';
+  margin-left: 5px;
+}

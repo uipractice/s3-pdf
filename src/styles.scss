@@ -1,1 +1,351 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'swiper/css';
+@use 'swiper/css/navigation';
+@use 'swiper/css/pagination';
+
+body {
+  font-family: "Urbanist", sans-serif;   
+   margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3 {
+    font-family: "Urbanist", sans-serif;   
+  }
+
+  h1{
+ color: #181818;
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+font-family: "Urbanist", sans-serif;   
+  }
+
+  p, span, a{
+    font-weight: 400;
+    font-family:"Urbanist", sans-serif;   
+
+  }
+
+  
+/* src/app/app.component.css */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  position: absolute;
+}
+.inner-container {
+  padding: 0px 60px;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.logo img {
+  height: 40px;
+}
+
+.tabs {
+  display: flex;
+  gap: 20px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  color: #FFF;
+font-weight: 500;
+line-height: 32px; 
+letter-spacing: 0.32px;
+padding: 4px 16px;
+gap: 2px;
+}
+
+.tabs button.active {
+  border-radius: 40px;
+  background: #FFF;
+color:#000;
+}
+
+.tabs button.signup {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 20px;
+}
+.right-sign-up {
+display: flex  ;
+align-items: center;
+justify-content: space-between;
+gap: 60px;
+}
+a.signup {
+color: #fff;
+border-bottom: 1px solid #fff;
+padding-bottom: 3px;
+font-size: 16px;
+font-weight: 500;
+line-height: 32px; 
+letter-spacing: 0.32px;
+
+  img {
+    padding:0px 5px;  }
+}
+/* Banner */
+.banner {
+  text-align: center;
+  padding: 20px 0;
+  background:url("../public/banner.png") no-repeat center;
+  color: #fff;
+  padding-top: 133px;
+}
+
+.banner h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background:linear-gradient(90deg, #00EAFF 0%, #BD31FF 35.5%, #FF3531 75%, #FFE070 100%);
+background-clip:text;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+width: 660px;
+margin:0 auto;
+}
+
+
+
+.banner p {
+  color: #FFF;
+  text-align:center;
+  font-size:22px;
+  line-height: 38px;
+  letter-spacing:0.44px;
+  opacity: 0.8;
+  padding-bottom: 20px;
+}
+
+/* Tab Content */
+.bg-black{
+background:#080808;
+}
+.bg-grey{
+background: #F8F8F8;
+}
+.tab-content {
+  padding:0px 0;
+}
+
+.user-experience,
+.user-interface {
+  padding:40px 0px;
+}
+
+.user-experience h2,
+.user-interface h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Loading Spinner */
+.loading {
+  text-align: center;
+  padding: 20px;
+}
+
+.loading p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.footer p {
+  color: rgba(255, 255, 255, 0.80);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px; 
+  letter-spacing: 0.28px;
+margin-top:0px;
+}
+
+.footer a {
+  color: #FFF;
+  font-size: 18px;
+  font-weight:500;
+  letter-spacing:0.36px;
+  text-decoration: none; 
+  padding-right:5px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+  /**********/
+  .swiper {
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+  }
+  
+  .swiper-wrapper {
+    display: flex !important;
+    align-items: stretch;
+    gap:30px;
+  }
+  
+  .swiper-slide {
+    width: 23% !important; /* 4 slides = 25% each */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-right:0px !important;
+  }
+  
+  .carousel-item {
+    // background-color: #fff;
+    // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    min-height:450px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid rgba(24, 24, 24, 0.02);
+    background: #FFF;
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.02);
+    &:hover {
+      border: 1px solid rgba(24, 24, 24, 0.05);
+      background:#FFF;
+      box-shadow: 0px 330px 92px 0px rgba(0, 0, 0, 0.00), 0px 211px 84px 0px rgba(0, 0, 0, 0.01), 0px 119px 71px 0px rgba(0, 0, 0, 0.03), 0px 20px 40px 0px rgba(0, 0, 0, 0.02), 0px 13px 29px 0px rgba(0, 0, 0, 0.05);    }
+  }
+  
+  .carousel-image {
+    height: 150px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .carousel-item h3 {
+    margin:20px 20px 0px;
+    color: #181818;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34px;
+    padding-bottom:16px;
+    border-bottom: 1px solid;
+    border-color:rgba(24, 24, 24, 0.1);
+  }
+  
+  .carousel-item p {
+flex-grow: 1;
+color: #181818;
+font-size: 14px;
+font-weight: 400;
+line-height: 24px; 
+margin:16px 20px;
+font-family:"Inter", sans-serif;
+  }
+  
+  .view-details {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    color: #007bff;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 20px 16px;
+    text-decoration: none;
+    padding:16px 0px;
+    border-top: 1px solid;
+    border-color:rgba(24, 24, 24, 0.1);
+    padding-bottom:5px;
+span{
+  font-size:22px;
+  color:#181818;
+}
+  }
+  
+  .view-details span {
+    margin-left: 5px;
+  }
+  
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: 2px solid #1F69FF;
+    border-radius: 50%;
+    color: #181818;
+    top: -50px;
+    transform: translateY(0);
+    z-index: 10;
+  }
+  
+  .swiper-button-prev {
+    right: 60px;
+    left: auto;
+  }
+  
+  .swiper-button-next {
+    right: 10px;
+  }
+  
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 16px;
+  }
+  .swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  border-color: #ccc;
+  color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+  .relative-div {
+    position: relative;
+  }
+.swiper-btn {
+  position: absolute;
+  right:0px;
+  top:0px;
+}
+
+
+
+.heading-split span {
+  color: #181818;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.36px;
+  display: block;
+}
+
+
+.swiper-button-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
