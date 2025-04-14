@@ -1,10 +1,19 @@
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import { S3Client, ListObjectsV2Command, GetObjectCommand } from '@aws-sdk/client-s3';
-import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
-import path from 'path';
-import { fileURLToPath } from 'url';
+// import express from 'express';
+// import cors from 'cors';
+// import dotenv from 'dotenv';
+// import { S3Client, ListObjectsV2Command, GetObjectCommand } from '@aws-sdk/client-s3';
+// import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
+// import path from 'path';
+// import { fileURLToPath } from 'url';
+
+const express = require ('express');
+const cors = require ('cors');
+const dotenv = require ('dotenv');
+const { S3Client, ListObjectsV2Command, GetObjectCommand } = require ('@aws-sdk/client-s3');
+const { getSignedUrl } =require ('@aws-sdk/s3-request-presigner');
+const path = require ('path');
+const { fileURLToPath } = require ('url');
+
 
 dotenv.config();
 const app = express();
