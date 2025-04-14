@@ -1,15 +1,8 @@
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
 import { S3Client, ListObjectsV2Command, GetObjectCommand } from '@aws-sdk/client-s3';
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
 
 dotenv.config();
-const app = express();
-app.use(cors());
-const PORT = process.env.PORT || 4000;
 
 const s3 = new S3Client({
   region: 'ap-south-1',
@@ -21,7 +14,12 @@ const s3 = new S3Client({
 
 let archivedPdfs = [];
 
-app.get('/api/pdfs', async (req, res) => {
+export default async function handler(req, res) {
+  if (req.method !== 'GET') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
+  }
+
   try {
     const command = new ListObjectsV2Command({
       Bucket: 'dashboard-ui-ux-pdfs',
@@ -95,7 +93,6 @@ app.get('/api/pdfs', async (req, res) => {
       },
     ];
 
-    // Assign PDFs to base items and ensure at least 8 items for sliding
     const userExperienceItems = userExperienceBase.map((item, index) => ({
       ...item,
       pdfUrl: pdfs[index % pdfs.length]?.downloadUrl || '',
@@ -114,25 +111,17 @@ app.get('/api/pdfs', async (req, res) => {
       userInterfaceItems.push(...userInterfaceItems.slice(0, 8 - userInterfaceItems.length));
     }
 
-    // Add dynamically uploaded PDFs as new items
     pdfs.forEach((pdf, index) => {
-      const userExperienceItem = {
+      const dynamicItem = {
         title: pdf.title,
         image: 'https://via.placeholder.com/300x200?text=PDF+Document',
         description: 'Dynamically uploaded PDF',
         pdfUrl: pdf.downloadUrl,
       };
-      const userInterfaceItem = {
-        title: pdf.title,
-        image: 'https://via.placeholder.com/300x200?text=PDF+Document',
-        description: 'Dynamically uploaded PDF',
-        pdfUrl: pdf.downloadUrl,
-      };
-
       if (index % 2 === 0) {
-        userExperienceItems.push(userExperienceItem);
+        userExperienceItems.push(dynamicItem);
       } else {
-        userInterfaceItems.push(userInterfaceItem);
+        userInterfaceItems.push(dynamicItem);
       }
     });
 
@@ -142,24 +131,9 @@ app.get('/api/pdfs', async (req, res) => {
       archived: archivedPdfs.map((pdf) => ({ title: pdf.title })),
     };
 
-    res.json(tabData);
+    res.status(200).json(tabData);
   } catch (error) {
-    console.error(error);
+    console.error('Error fetching PDFs:', error);
     res.status(500).json({ error: 'Error fetching PDFs' });
   }
-});
-// Serve Angular static files from dist/s3-pdf
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const distPath = path.join(__dirname, 'dist/s3-pdf');
-
-app.use(express.static(distPath));
-
-// Angular fallback route (for SPA support)
-app.get('*', (req, res) => {
-  res.sendFile(path.join(distPath, 'index.html'));
-});
-
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+}
