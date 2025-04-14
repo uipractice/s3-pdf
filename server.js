@@ -161,7 +161,7 @@ app.get('/api/pdfs', async (req, res) => {
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const distPath = path.join(__dirname, 'dist/s3-pdf');
+const distPath = path.join(__dirname, 'dist/s3-pdf/browser');
 
 app.use(express.static(distPath));
 
