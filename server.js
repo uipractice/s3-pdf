@@ -169,7 +169,7 @@ app.use(express.static(distPath));
 // Angular fallback route (for SPA support)
 app.get('*', (req, res) => {
  // res.sendFile(path.join(distPath, 'index.html'));
- 
+
  const indexPath = path.join(distPath, 'index.html');
  res.sendFile(indexPath, (err) => {
    if (err) {
@@ -184,11 +184,19 @@ app.get('*', (req, res) => {
 // });
 
 
-if (!process.env.VERCEL_ENV) {
-  // VERCEL_ENV is automatically set on Vercel deployments.
+// if (!process.env.VERCEL_ENV) {
+  
+//   const PORT = process.env.PORT || 4000;
+//   app.listen(PORT, () => {
+//     console.log(`Server is running at http://localhost:${PORT}`);
+//   });
+// }
+
+if (process.env.NODE_ENV === 'production') {
   const PORT = process.env.PORT || 4000;
   app.listen(PORT, () => {
-    console.log(`Server is running at http://localhost:${PORT}`);
+    console.log(`Server running in production at http://localhost:${PORT}`);
   });
 }
+
 export default serverless(app);
