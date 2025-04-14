@@ -162,7 +162,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const distPath = path.join(__dirname, 'dist/s3-pdf');
-pp.use(express.static(distPath));
+
+app.use(express.static(distPath));
 
 // Angular fallback route (for SPA support)
 app.get('*', (req, res) => {
