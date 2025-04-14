@@ -1,3 +1,4 @@
+import serverless from 'serverless-http';
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
@@ -18,7 +19,7 @@ import { fileURLToPath } from 'url';
 dotenv.config();
 const app = express();
 app.use(cors());
-const PORT = process.env.PORT || 4000;
+//const PORT = process.env.PORT || 4000;
 
 const s3 = new S3Client({
   region: 'ap-south-1',
@@ -170,6 +171,16 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(distPath, 'index.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server running on http://localhost:${PORT}`);
+// });
+
+
+if (!process.env.VERCEL_ENV) {
+  // VERCEL_ENV is automatically set on Vercel deployments.
+  const PORT = process.env.PORT || 4000;
+  app.listen(PORT, () => {
+    console.log(`Server is running at http://localhost:${PORT}`);
+  });
+}
+export default serverless(app);
