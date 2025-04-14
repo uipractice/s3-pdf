@@ -168,7 +168,15 @@ app.use(express.static(distPath));
 
 // Angular fallback route (for SPA support)
 app.get('*', (req, res) => {
-  res.sendFile(path.join(distPath, 'index.html'));
+ // res.sendFile(path.join(distPath, 'index.html'));
+ 
+ const indexPath = path.join(distPath, 'index.html');
+ res.sendFile(indexPath, (err) => {
+   if (err) {
+     console.error('Error sending index.html:', err);
+     res.status(500).send('Error loading application');
+   }
+ });
 });
 
 // app.listen(PORT, () => {
