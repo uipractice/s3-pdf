@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       { "src": "server.js", "use": "@vercel/node" },
-      { "src": "dist/s3-pdf/browser/**/*", "use": "@vercel/static" }
+      { "src": "dist/s3-pdf/**/*", "use": "@vercel/static" }
     ],
     "routes": [
       { "src": "/api/.*", "dest": "/server.js" },
