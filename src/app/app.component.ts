@@ -1,4 +1,3 @@
-// src/app/app.component.ts
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CarouselComponent } from './carousel/carousel.component';
@@ -8,7 +7,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CarouselComponent,CommonModule,],
+  imports: [CarouselComponent, CommonModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
@@ -23,7 +22,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.fetchPdfs();
-    this.pollingSubscription = interval(30000).subscribe(() => {
+    this.pollingSubscription = interval(60000).subscribe(() => {
       this.fetchPdfs();
     });
   }
@@ -36,8 +35,10 @@ export class AppComponent implements OnInit, OnDestroy {
 
   fetchPdfs() {
     this.loading = true;
-    this.http.get('http://localhost:4000/api/pdfs').subscribe({
+    // Use relative URL to avoid CORS issues
+    this.http.get('/api/pdfs').subscribe({
       next: (data: any) => {
+        console.log('Fetched PDFs:', data);
         this.userExperienceItems = data.userExperience || [];
         this.userInterfaceItems = data.userInterface || [];
 

@@ -7,20 +7,13 @@ import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-// const express = require ('express');
-// const cors = require ('cors');
-// const dotenv = require ('dotenv');
-// const { S3Client, ListObjectsV2Command, GetObjectCommand } = require ('@aws-sdk/client-s3');
-// const { getSignedUrl } =require ('@aws-sdk/s3-request-presigner');
-// const path = require ('path');
-// const { fileURLToPath } = require ('url');
-
-
+// Load environment variables
 dotenv.config();
+
 const app = express();
 app.use(cors());
-//const PORT = process.env.PORT || 4000;
 
+// Initialize S3 client
 const s3 = new S3Client({
   region: 'ap-south-1',
   credentials: {
@@ -29,35 +22,72 @@ const s3 = new S3Client({
   },
 });
 
+// In-memory cache for PDFs
 let archivedPdfs = [];
+let pdfCache = null;
+let cacheTimestamp = 0;
+const CACHE_DURATION = 5 * 60 * 1000; // Cache for 5 minutes
 
-app.get('/api/pdfs', async (req, res) => {
+// Helper function to fetch PDFs from S3
+async function fetchPdfs() {
+  const startTime = Date.now();
+  console.log('Fetching PDFs from S3');
   try {
     const command = new ListObjectsV2Command({
       Bucket: 'dashboard-ui-ux-pdfs',
       Prefix: '',
+      MaxKeys: 10, // Further reduced
     });
     const { Contents } = await s3.send(command);
+    console.log(`S3 ListObjects took ${Date.now() - startTime}ms, found ${Contents?.length || 0} objects`);
 
     const currentPdfs = Contents?.filter((file) => file.Key?.endsWith('.pdf')) || [];
+    console.log(`Filtered ${currentPdfs.length} PDFs`);
+
     const pdfKeys = currentPdfs.map((file) => file.Key);
 
+    // Update archived PDFs
     const previouslySeen = archivedPdfs.map((pdf) => pdf.key);
     const newlyDeleted = previouslySeen.filter((key) => !pdfKeys.includes(key));
     archivedPdfs = archivedPdfs
       .filter((pdf) => pdfKeys.includes(pdf.key))
       .concat(newlyDeleted.map((key) => ({ key, title: key.split('/').pop() })));
 
+    // Generate signed URLs
     const pdfs = await Promise.all(
       currentPdfs.map(async (file) => {
+        const urlStartTime = Date.now();
         const signedUrl = await getSignedUrl(
           s3,
           new GetObjectCommand({ Bucket: 'dashboard-ui-ux-pdfs', Key: file.Key }),
           { expiresIn: 3600 }
         );
+        console.log(`Signed URL for ${file.Key} took ${Date.now() - urlStartTime}ms`);
         return { title: file.Key.split('/').pop(), downloadUrl: signedUrl };
       })
     );
+
+    return pdfs;
+  } catch (error) {
+    console.error('Error fetching PDFs:', error);
+    throw error;
+  }
+}
+
+// API endpoint to fetch PDFs
+app.get('/api/pdfs', async (req, res) => {
+  const startTime = Date.now();
+  console.log('Hit /api/pdfs endpoint');
+  try {
+    if (pdfCache && Date.now() - cacheTimestamp < CACHE_DURATION) {
+      console.log('Serving PDFs from cache');
+    } else {
+      console.log('Cache miss or expired, fetching new PDFs');
+      pdfCache = await fetchPdfs();
+      cacheTimestamp = Date.now();
+    }
+
+    const pdfs = pdfCache;
 
     const userExperienceBase = [
       {
@@ -105,7 +135,6 @@ app.get('/api/pdfs', async (req, res) => {
       },
     ];
 
-    // Assign PDFs to base items and ensure at least 8 items for sliding
     const userExperienceItems = userExperienceBase.map((item, index) => ({
       ...item,
       pdfUrl: pdfs[index % pdfs.length]?.downloadUrl || '',
@@ -124,7 +153,6 @@ app.get('/api/pdfs', async (req, res) => {
       userInterfaceItems.push(...userInterfaceItems.slice(0, 8 - userInterfaceItems.length));
     }
 
-    // Add dynamically uploaded PDFs as new items
     pdfs.forEach((pdf, index) => {
       const userExperienceItem = {
         title: pdf.title,
@@ -152,51 +180,42 @@ app.get('/api/pdfs', async (req, res) => {
       archived: archivedPdfs.map((pdf) => ({ title: pdf.title })),
     };
 
+    console.log(`/api/pdfs completed in ${Date.now() - startTime}ms`);
     res.json(tabData);
   } catch (error) {
-    console.error(error);
+    console.error('Error in /api/pdfs:', error);
     res.status(500).json({ error: 'Error fetching PDFs' });
   }
 });
-// Serve Angular static files from dist/s3-pdf
+
+// Serve Angular static files
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 const distPath = path.join(__dirname, 'dist/s3-pdf');
 
-app.use(express.static(distPath));
+app.use(express.static(distPath, {
+  maxAge: '1y',
+  etag: false,
+  setHeaders: (res, path) => {
+    if (path.endsWith('.js')) {
+      res.setHeader('Content-Type', 'application/javascript');
+    } else if (path.endsWith('.css')) {
+      res.setHeader('Content-Type', 'text/css');
+    }
+  }
+}));
 
-// Angular fallback route (for SPA support)
-app.get('*', (req, res) => {
- // res.sendFile(path.join(distPath, 'index.html'));
-
- const indexPath = path.join(distPath, 'index.html');
- res.sendFile(indexPath, (err) => {
-   if (err) {
-     console.error('Error sending index.html:', err);
-     res.status(500).send('Error loading application');
-   }
- });
+// Angular SPA fallback route (only for non-API routes)
+app.get(/^\/(?!api\/).*$/, (req, res) => {
+  console.log(`SPA fallback for: ${req.path}`);
+  const indexPath = path.join(distPath, 'index.html');
+  res.sendFile(indexPath, (err) => {
+    if (err) {
+      console.error('Error sending index.html:', err);
+      res.status(500).send('Error loading application');
+    }
+  });
 });
 
-// app.listen(PORT, () => {
-//   console.log(`Server running on http://localhost:${PORT}`);
-// });
-
-
-// if (!process.env.VERCEL_ENV) {
-  
-//   const PORT = process.env.PORT || 4000;
-//   app.listen(PORT, () => {
-//     console.log(`Server is running at http://localhost:${PORT}`);
-//   });
-// }
-
-if (process.env.NODE_ENV === 'production') {
-  const PORT = process.env.PORT || 4000;
-  app.listen(PORT, () => {
-    console.log(`Server running in production at http://localhost:${PORT}`);
-  });
-}
-
+// Export for Vercel serverless
 export default serverless(app);
