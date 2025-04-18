@@ -98,6 +98,7 @@ font-size: 16px;
 font-weight: 500;
 line-height: 32px; 
 letter-spacing: 0.32px;
+text-decoration:none;
 
   img {
     padding:0px 5px;  }
@@ -141,14 +142,19 @@ background:#080808;
 }
 .bg-grey{
 background: #F8F8F8;
+padding:40px 0px 55px 0px;
 }
+.bg-white{
+  background:#fff;
+  padding:40px 0px 55px 0px;
+  }
 .tab-content {
   padding:0px 0;
 }
 
 .user-experience,
 .user-interface {
-  padding:40px 0px;
+  padding:0px 0px;
 }
 
 .user-experience h2,
@@ -157,6 +163,7 @@ background: #F8F8F8;
   font-weight: bold;
   margin-bottom: 20px;
   color: #333;
+  margin-top:0px;
 }
 
 /* Loading Spinner */

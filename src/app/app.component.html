@@ -1,73 +1,91 @@
-
-
-<!-- src/app/app.component.html -->
-<section class="bg-black"> 
-<div class="container">
-    <!-- Header -->
+<section class="bg-black">
+  <div class="container">
     <header class="header inner-container">
       <div class="top-header">
-      <div class="logo">
-        <img src="./logo-1x.svg" alt="Evoke Technologies" />
+        <div class="logo">
+          <img src="./logo-1x.svg" alt="Evoke Technologies" />
+        </div>
+        <nav class="tabs">
+          <button
+            [class.active]="activeTab === 'user-experience'"
+            (click)="onTabChange('user-experience')"
+            aria-label="User Experience Tab"
+          >
+            User Experience
+          </button>
+          <button
+            [class.active]="activeTab === 'user-interface'"
+            (click)="onTabChange('user-interface')"
+            aria-label="User Interface Tab"
+          >
+            User Interface
+          </button>
+        </nav>
+        <div class="right-sign-up">
+          <a class="search">
+            <img src="search.svg" alt="search icon" title="search" />
+          </a>
+          <a class="signup" href="/signup" aria-label="Sign Up">
+            Sign Up
+            <img src="arrow-up.svg" alt="arrow up" title="arrow" />
+          </a>
+        </div>
       </div>
-      <nav class="tabs">
-        <button
-          [class.active]="activeTab === 'user-experience'"
-          (click)="activeTab = 'user-experience'"
-        >
-          User Experience
-        </button>
-        <button
-          [class.active]="activeTab === 'user-interface'"
-          (click)="activeTab = 'user-interface'"
-        >
-          User Interface
-        </button>
-        
-      </nav>
-      <div class="right-sign-up">
-      <a class="search"> <img src="search.svg" alt="search icon" title="search"/></a>
-      <a class="signup">Sign Up <img src="arrow-up.svg" alt="arrow up" title="arrow"/></a>
-    </div>
-    </div>
     </header>
-
-  
-    <!-- Banner -->
     <div class="banner">
       <h1>Innovate. Collaborate. Elevate</h1>
-      <p>Discover a consolidated source of UI/UX inspiration, best <br/>practices and resources</p>
-    </div>
-  </div>
-  </section>
-<section class="bg-grey"> 
-  <div class="container">
-    <!-- Tab Content -->
-    <div class="tab-content inner-container">
-      <!-- Loading Spinner -->
-      <div *ngIf="loading" class="loading">
-        <p>Loading...</p>
-      </div>
-  
-      <!-- User Experience Tab -->
-      <div *ngIf="activeTab === 'user-experience' && !loading" class="user-experience">
-        <h2 class="heading-split"><span>Latest</span> Innovations</h2>
-        <app-carousel [items]="userExperienceItems"></app-carousel>
-      </div>
-  
-      <!-- User Interface Tab -->
-      <div *ngIf="activeTab === 'user-interface' && !loading" class="user-interface">
-        <h2 class="heading-split"><span>UI Resources</span>Essential UI Repository</h2>
-        <app-carousel [items]="userInterfaceItems"></app-carousel>
-      </div>
+      <p>Discover a consolidated source of UI/UX inspiration, best <br>practices and resources</p>
     </div>
   </div>
 </section>
- 
-    <footer class="footer">
-    <div class="container">
-      <p>For queries & suggestions, write to us <br/><a href="mailto:uiuxpractice@evoke.com">uiuxpractice&#64;evoketehnologies.com</a><img src="arrow-up.svg" alt="arrow up" title="arrow"/></p>
+
+<!--User Experience-->
+      <div *ngIf="activeTab === 'user-experience'" class="user-experience">
+        <section class="bg-grey">
+          <div class="container">
+            <div class="tab-content inner-container">
+        <div class="carousel-section">
+          <h2 class="heading-split"><span>Latest</span> Innovations</h2>
+          <app-carousel [items]="userExperienceItems" [carouselId]="'ux-innovations'"></app-carousel>
+        </div>
+      </div>
     </div>
-    </footer>
+  </section>
+
+  <section class="bg-white">
+    <div class="container">
+      <div class="tab-content inner-container">
+        <div class="carousel-section">
+          <h2 class="heading-split"><span>UI Resources</span> Essentials UI Repository</h2>
+          <app-carousel [items]="userInterfaceItems" [carouselId]="'ui-repository'"></app-carousel>
+        </div>
+      </div>
+    </div> 
+</section>
+  </div>
+<!--User Interface-->
+
+       <div *ngIf="activeTab === 'user-interface'" class="user-interface">
+        <section class="bg-grey">
+          <div class="container">
+            <div class="tab-content inner-container">
+        <div class="carousel-section">
+          <h2 class="heading-split"><span>UI Resources</span> Essentials UI Repository</h2>
+          <app-carousel [items]="userInterfaceItems" [carouselId]="'ui-repository'"></app-carousel>
+        </div>
+      </div>
+      </div>
+    </section>
+    </div>
+  
  
 
-
+<footer class="footer">
+  <div class="container">
+    <p>
+      For queries & suggestions, write to us<br />
+      <a href="mailto:uiuxpractice@evoketechnologies.com">uiuxpractice-evoketechnologies.com</a>
+      <img src="assets/arrow-up.svg" alt="arrow up" title="arrow" />
+    </p>
+  </div>
+</footer>

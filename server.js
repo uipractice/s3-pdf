@@ -8,8 +8,7 @@ import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 dotenv.config();
 const app = express();
 app.use(cors({
-  origin: ['http://localhost:4200', 
-    'https://s3-pdf.vercel.app'],
+  origin: ['http://localhost:4200', 'https://s3-pdf-zxhw.vercel.app'],
   methods: ['GET'],
   allowedHeaders: ['Content-Type']
 }));
@@ -31,6 +30,7 @@ app.get('/', (req, res) => {
 
 app.get('/api/pdfs', async (req, res) => {
   try {
+    console.log('Received request for /api/pdfs');
     const command = new ListObjectsV2Command({
       Bucket: 'dashboard-ui-ux-pdfs',
       Prefix: '',
@@ -40,8 +40,9 @@ app.get('/api/pdfs', async (req, res) => {
     });
 
     const currentPdfs = Contents?.filter((file) => file.Key?.endsWith('.pdf')) || [];
-    const pdfKeys = currentPdfs.map((file) => file.Key);
+    console.log('S3 PDFs:', currentPdfs.map((file) => file.Key));
 
+    const pdfKeys = currentPdfs.map((file) => file.Key);
     const previouslySeen = archivedPdfs.map((pdf) => pdf.key);
     const newlyDeleted = previouslySeen.filter((key) => !pdfKeys.includes(key));
     archivedPdfs = archivedPdfs
@@ -63,6 +64,8 @@ app.get('/api/pdfs', async (req, res) => {
         }
       })
     ).then((results) => results.filter((pdf) => pdf !== null));
+
+    console.log('Generated PDFs:', pdfs);
 
     const userExperienceBase = [
       {
@@ -155,10 +158,11 @@ app.get('/api/pdfs', async (req, res) => {
       archived: archivedPdfs.map((pdf) => ({ title: pdf.title })),
     };
 
+    console.log('API Response:', JSON.stringify(tabData, null, 2));
     res.json(tabData);
   } catch (error) {
     console.error('Error in /api/pdfs:', error);
-    res.status(500).json({ error: 'Failed to fetch PDFs', details: error.message });
+    res.status(500).json({ error: 'Failed to fetch PDFs', details: error.message }); // Fixed: Added semicolon
   }
 });
 
