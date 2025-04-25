@@ -1,4 +1,12 @@
-import { Component, Input, AfterViewInit, OnDestroy, ViewChild, ElementRef, OnChanges } from '@angular/core';
+import {
+  Component,
+  Input,
+  AfterViewInit,
+  OnDestroy,
+  ViewChild,
+  ElementRef,
+  OnChanges,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
@@ -18,15 +26,27 @@ import { Navigation } from 'swiper/modules';
               </div>
               <h3>{{ item.title }}</h3>
               <p>{{ item.description }}</p>
-              <a [href]="item.pdfUrl" target="_blank" class="view-details">View Details <span>→</span></a>
+              <a
+                [href]="item.pdfUrl"
+                target="_blank"
+                class="view-details"
+              >
+                View Details <span>→</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
 
       <div class="swiper-btn">
-        <div [class]="'swiper-button-prev-' + carouselId" class="swiper-button-prev"></div> <!-- Prev Button -->
-        <div [class]="'swiper-button-next-' + carouselId" class="swiper-button-next"></div> <!-- Next Button -->
+        <div
+          [class]="'swiper-button-prev-' + carouselId"
+          class="swiper-button-prev"
+        ></div>
+        <div
+          [class]="'swiper-button-next-' + carouselId"
+          class="swiper-button-next"
+        ></div>
       </div>
     </div>
 
@@ -70,8 +90,8 @@ export class CarouselComponent implements AfterViewInit, OnDestroy, OnChanges {
     if (this.swiperRef?.nativeElement) {
       this.swiperInstance = new Swiper(this.swiperRef.nativeElement, {
         modules: [Navigation],
-        slidesPerView: 4,       // Show 4 slides at a time
-        slidesPerGroup: 1,      // Ensure one slide moves per navigation
+        slidesPerView: 'auto',
+        slidesPerGroup: 1,
         spaceBetween: 20,
         pagination: { clickable: true },
         loop: false,
@@ -109,12 +129,17 @@ export class CarouselComponent implements AfterViewInit, OnDestroy, OnChanges {
   private updateNavigationButtons() {
     if (!this.swiperInstance) return;
 
-    const prevButton = document.querySelector(`.swiper-button-prev-${this.carouselId}`) as HTMLElement;
-    const nextButton = document.querySelector(`.swiper-button-next-${this.carouselId}`) as HTMLElement;
+    const prevButton = document.querySelector(
+      `.swiper-button-prev-${this.carouselId}`
+    ) as HTMLElement | null;
+
+    const nextButton = document.querySelector(
+      `.swiper-button-next-${this.carouselId}`
+    ) as HTMLElement | null;
 
     const totalSlides = this.swiperInstance.slides.length;
     const currentIndex = this.swiperInstance.activeIndex;
-    const slidesPerView = this.swiperInstance.params.slidesPerView || 4;
+    const slidesPerView = this.swiperInstance.slidesPerViewDynamic();
 
     if (this.swiperInstance.isBeginning) {
       prevButton?.classList.add('swiper-button-disabled');
@@ -122,7 +147,7 @@ export class CarouselComponent implements AfterViewInit, OnDestroy, OnChanges {
       prevButton?.classList.remove('swiper-button-disabled');
     }
 
-    if (currentIndex >= totalSlides - Number(slidesPerView)) {
+    if (currentIndex >= totalSlides - slidesPerView) {
       nextButton?.classList.add('swiper-button-disabled');
     } else {
       nextButton?.classList.remove('swiper-button-disabled');

@@ -22,14 +22,14 @@
           </button>
         </nav>
         <div class="right-sign-up">
-          <a class="search">
+          <!-- <a class="search">
             <img src="search.svg" alt="search icon" title="search" />
-          </a>
+          </a> -->
           <a class="signup" href="/signup" aria-label="Sign Up">
-            Sign Up
-            <img src="arrow-up.svg" alt="arrow up" title="arrow" />
+            <!-- Sign Up
+            <img src="arrow-up.svg" alt="arrow up" title="arrow" /> -->
           </a>
-        </div>
+        </div> 
       </div>
     </header>
     <div class="banner">
@@ -70,22 +70,31 @@
           <div class="container">
             <div class="tab-content inner-container">
         <div class="carousel-section">
-          <h2 class="heading-split"><span>UI Resources</span> Essentials UI Repository</h2>
-          <app-carousel [items]="userInterfaceItems" [carouselId]="'ui-repository'"></app-carousel>
+          <h2 class="heading-split"><span>UI Frontend</span> UI Frontend</h2>
+          <app-carousel [items]="EssentialsUIRepository" [carouselId]="'ux-innovations'"></app-carousel>
         </div>
       </div>
       </div>
     </section>
+
+    <section class="bg-white">
+      <div class="container">
+        <div class="tab-content inner-container">
+          <div class="carousel-section">
+            <h2 class="heading-split"><span>UI Resources</span> Essentials UI Repository</h2>
+            <app-carousel [items]="Components" [carouselId]="'ui-repository'"></app-carousel>
+          </div>
+        </div>
+      </div> 
+  </section>
     </div>
-  
- 
 
 <footer class="footer">
   <div class="container">
     <p>
       For queries & suggestions, write to us<br />
       <a href="mailto:uiuxpractice@evoketechnologies.com">uiuxpractice-evoketechnologies.com</a>
-      <img src="assets/arrow-up.svg" alt="arrow up" title="arrow" />
+      <img src="./arrow-up.svg" alt="arrow up" title="arrow" />
     </p>
   </div>
 </footer>

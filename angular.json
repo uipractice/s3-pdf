@@ -112,6 +112,8 @@
               }
             ],
             "styles": [
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/default.css",
+
               "src/styles.scss"
             ],
             "scripts": []
