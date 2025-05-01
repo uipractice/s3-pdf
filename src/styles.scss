@@ -265,7 +265,7 @@ padding-right: 50px;
   .carousel-item h3 {
     margin:20px 20px 0px;
     color: #181818;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 500;
     line-height: 34px;
     padding-bottom:16px;
@@ -386,4 +386,15 @@ span{
   .banner {    
     padding-top:173px;
   }
+  .dataTables_filter {
+    float: right;
+    margin-bottom: 16px;
+    margin-top: 60px !important;
+    float: left !important;
+    text-align: left;
+}
+.dataTables_wrapper .dataTables_filter input {
+  margin-top: 30px;
+  float: left;
+}
 }
