@@ -190,7 +190,65 @@ export class AppComponent {
       description: 'Stay ahead with the latest UI design trends.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-JavaScript-Developers-v1.pdf',
     },
+    
   ];
+
+  Components2: CarouselItem[] = [
+    {
+      title: 'Angular Upgrade Path: Ensuring Smooth Transitions Across Versions',
+      image: './angular-19.png',
+      description: 'Standardized components for rapid UI development.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Angular-Upgrade-Path-Ensuring-Smooth-Transitions-Across-Versions-v1.pdf',
+    },
+    {
+      title: 'Code Review Handbook forReact Developer',
+      image: './Components-2.png',
+      description: 'Provides tools for consistent branding across UI elements.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-React-Developers_v1.pdf',
+    },
+  
+    {
+      title: 'Code Review Handbook forVue Developers',
+      image: './Components-4.png',
+      description: 'Best practices for creating intuitive user interfaces.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-Vue-Developers-v1.pdf',
+    },
+    {
+      title: 'Code Review Handbook for JavaScript Developers',
+      image: './best-practices-4.png',
+      description: 'Stay ahead with the latest UI design trends.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-JavaScript-Developers-v1.pdf',
+    },
+  ];
+
+  Components3: CarouselItem[] = [
+    {
+      title: 'Getting the Most Out of Angular 19: New Features and Best Practices',
+      image: './angular-19.png',
+      description: 'Standardized components for rapid UI development.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/Getting-the-Most-Out-of-Angular-19-New-Features-and-Best-Practices-v1.pdf',
+    },
+    {
+      title: 'Getting the Most Out of React 19: New Features and Best Practices',
+      image: './Components-2.png',
+      description: 'Provides tools for consistent branding across UI elements.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Getting-the-Most-Out-of-React-19-New-Features-and-Best-Practices-v1.pdf',
+    },
+  
+    {
+      title: 'Code Review Handbook forVue Developers',
+      image: './Components-4.png',
+      description: 'Best practices for creating intuitive user interfaces.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-Vue-Developers-v1.pdf',
+    },
+    {
+      title: 'Code Review Handbook for JavaScript Developers',
+      image: './best-practices-4.png',
+      description: 'Stay ahead with the latest UI design trends.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-JavaScript-Developers-v1.pdf',
+    },
+  ];
+
    // Debug method to log tab changes
    onTabChange(tab: string) {
     console.log('Switching to tab:', tab);
