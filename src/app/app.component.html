@@ -45,7 +45,7 @@
           <div class="container">
             <div class="tab-content inner-container">
         <div class="carousel-section">
-          <h2 class="heading-split"><span>Latest</span> Innovations</h2>
+          <h2 class="heading-split"><span>Latest</span> Latest Trends</h2>
           <app-carousel [items]="userExperienceItems" [carouselId]="'ux-innovations'"></app-carousel>
         </div>
       </div>
@@ -56,11 +56,41 @@
     <div class="container">
       <div class="tab-content inner-container">
         <div class="carousel-section">
-          <h2 class="heading-split"><span>UI Resources</span> Essentials UI Repository</h2>
+          <h2 class="heading-split"><span>UX Latest</span>UX Resources</h2>
           <app-carousel [items]="userInterfaceItems" [carouselId]="'ui-repository'"></app-carousel>
         </div>
       </div>
     </div> 
+</section>
+<section class="bg-white">
+  <div class="container">
+    <div class="tab-content inner-container">
+      <div class="carousel-section">
+        <h2 class="heading-split"><span>UX Latest</span>Brand & Design Hub</h2>
+        <app-carousel [items]="userInterfaceItems" [carouselId]="'ui-repository'"></app-carousel>
+      </div>
+    </div>
+  </div> 
+</section>
+<section class="bg-white">
+  <div class="container">
+    <div class="tab-content inner-container">
+      <div class="carousel-section">
+        <h2 class="heading-split"><span>UX Latest</span>UX Documents</h2>
+        <app-carousel [items]="userInterfaceItems" [carouselId]="'ui-repository'"></app-carousel>
+      </div>
+    </div>
+  </div> 
+</section>
+<section class="bg-white">
+  <div class="container">
+    <div class="tab-content inner-container">
+      <div class="carousel-section">
+        <h2 class="heading-split"><span>UX Latest</span>Monthly UX Meetings</h2>
+        <app-carousel [items]="userInterfaceItems" [carouselId]="'ui-repository'"></app-carousel>
+      </div>
+    </div>
+  </div> 
 </section>
   </div>
 <!--User Interface-->
@@ -71,32 +101,78 @@
             <div class="tab-content inner-container">
         <div class="carousel-section">
           <h2 class="heading-split"><span>UI Frontend</span>Best practices</h2>
-          <app-carousel [items]="EssentialsUIRepository" [carouselId]="'ux-innovations'"></app-carousel>
+          <app-carousel [items]="Components" [carouselId]="'ui-repository'"></app-carousel>
+          
         </div>
       </div>
       </div>
     </section>
-
-    <section class="bg-white">
+    <section class="bg-grey">
       <div class="container">
         <div class="tab-content inner-container">
           <div class="carousel-section">
-            <h2 class="heading-split"><span>Reusable </span> Components</h2>
-            <app-carousel [items]="Components" [carouselId]="'ui-repository'"></app-carousel>
+            <h2 class="heading-split"><span>Best Practices</span>Code Review Documents</h2>
+            <app-carousel [items]="Components1" [carouselId]="'ui-reposi'"></app-carousel>
           </div>
         </div>
       </div> 
   </section>
-  <section class="bg-grey">
+    <section class="bg-white">
+      <div class="container">
+        <div class="tab-content inner-container">
+          <div class="carousel-section">
+            <h2 class="heading-split"><span>Frontend </span> Reusable Components</h2>
+            <app-carousel [items]="EssentialsUIRepository" [carouselId]="'ux-innovations'"></app-carousel>
+          </div>
+        </div>
+      </div> 
+  </section>
+
+  <section class="bg-white">
     <div class="container">
       <div class="tab-content inner-container">
         <div class="carousel-section">
-          <h2 class="heading-split"><span>Best Practices</span>Code Review</h2>
-          <app-carousel [items]="Components1" [carouselId]="'ui-reposi'"></app-carousel>
+          <h2 class="heading-split"><span>Frontend </span> New Features</h2>
+          <app-carousel [items]="Components" [carouselId]="'new-features'"></app-carousel>
         </div>
       </div>
     </div> 
 </section>
+<section class="bg-white">
+  <div class="container">
+    <div class="tab-content inner-container">
+      <div class="carousel-section">
+        <h2 class="heading-split"><span>Frontend </span>Version Upgrade Process</h2>
+        <app-carousel [items]="Components" [carouselId]="'v-u-Process'"></app-carousel>
+      </div>
+    </div>
+  </div> 
+</section>
+
+<section class="bg-white">
+  <div class="container">
+    <div class="tab-content inner-container">
+      <div class="carousel-section">
+        <h2 class="heading-split"><span>Frontend </span>Design Patterns </h2>
+        <app-carousel [items]="Components" [carouselId]="'d-patterns'"></app-carousel>
+      </div>
+    </div>
+  </div> 
+</section>
+
+<section class="bg-white">
+  <div class="container">
+    <div class="tab-content inner-container">
+      <div class="carousel-section">
+        <h2 class="heading-split"><span>Frontend </span>Training Session Recordings</h2>
+        <app-carousel [items]="Components" [carouselId]="'t-d-recordings'"></app-carousel>
+      </div>
+    </div>
+  </div> 
+</section>
+
+
+  
     </div>
 
 <footer class="footer">
