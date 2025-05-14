@@ -59,30 +59,30 @@ export class AppComponent {
   ];
 
   
-  EssentialsUIRepository: CarouselItem[] = [
+  ReusableComponents: CarouselItem[] = [
     {
       title: ' Angular Reusable Components',
-      image: './angular-19.png',
+      image: './ReusableComponents/Angular-Reusable-Components.png',
       description: 'It ensures design consistency, clarity, defines principles, colors.',
       pdfUrl: 'https://angular-components.evokeapps.com/dashboard', 
     },
     
     {
       title: 'React Reusable Components',
-      image: './Components-2.png',
+      image: './ReusableComponents/React-Reusable-Components.png',
       description: 'Enhances user engagement with smooth animations and transitions.',
       pdfUrl: 'https://react-components.evokeapps.com/',
     },
   
     {
       title: 'Vue Reusable Components',
-      image: './Components-4.png',
+      image: './ReusableComponents/Vue-Reusable-Components.png',
       description: 'Keeps your designs aligned with the latest UX innovations.',
       pdfUrl: 'https://vue-components.evokeapps.com/',
     },
     {
       title: 'UI Reusable Components',
-      image: './best-practices-1.png',
+      image: './ReusableComponents/UI-Reusable-Components.png',
       description: 'Keeps your designs aligned with the latest UX innovations.',
       pdfUrl: 'https://ui-components.evokeapps.com/',
     },
@@ -116,60 +116,89 @@ export class AppComponent {
   ];
 
 
-  Components: CarouselItem[] = [
+  BestPractices: CarouselItem[] = [
     {
       title: 'Best Practices for Clean and High-Performance Angular Application',
-      image: './uI-repository-1.png',
+      image: './bestpractices/Angular-Best-ractices.png',
       description: 'Provides tools for consistent branding across UI elements.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-Angular-Applications-v1.pdf',
     },
   
     {
       title: 'Best Practices for Clean and High-Performance React Applications',
-      image: './ui-repository-2.png',
+      image: './bestpractices/React-Best-Practices.png',
       description: 'Standardized components for rapid UI development.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-React-Applications-v1',
     },
   
     {
       title: 'Best Practices for Clean and High-PerformanceVue Applications',
-      image: './Components-4.png',
+      image: './bestpractices/Vue-Best Practices.png',
       description: 'Stay ahead with the latest UI design trends.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-Vue-Applications-v1.pdf',
     },
     {
       title: 'Best Practices for Clean and High-Performance JavaScript Application',
-      image: './best-practices-4.png',
+      image: './bestpractices/JavaScript-Best-Practices.png',
       description: 'Keeps your designs aligned with the latest UX innovations.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-JavaScript-Applications-v1.pdf',
     },
     {
       title: 'Best Practices for Clean and High-Performance HTML Applications',
-      image: './html-practices.jpg',
+      image: './bestpractices/HTML-Best-ractices.png',
       description: 'Keeps your designs aligned with the latest UX innovations.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-HTML-Applications_v1.pdf',
     },
     {
       title: 'Best Practices for Clean and High-Performance CSS Applications',
-      image: './best-practices-2.png',
+      image: './bestpractices/CSS-Best-Practices.png',
       description: 'Establishes best practices for layouts, spacing, iconography, and usability.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-CSS-Applications-v1.pdf',
     },
     {
       title: 'Implementing Web Accessibility WCAG 2.1 AA and AAA levels',
-      image: './best-practices-1.png',
+      image: './bestpractices/Accessibility-Best-Practices.png',
       description: 'It ensures design consistency, clarity, defines principles, colors.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Implementing-Web-Accessibility-WCAG 2.1-AA-AAA-levels.pdf', // Replace with your S3 PDF link
     },
 
   ];
 
-  Components1: CarouselItem[] = [
+  CodeReview: CarouselItem[] = [
     {
       title: 'Code Review Handbook forAngular Developers',
-      image: './angular-19.png',
+      image: './codeReviewFiles/Angular-Code-Review.png',
       description: 'Standardized components for rapid UI development.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-Angular-Developers-v1.pdf',
+    },
+    {
+      title: 'Code Review Handbook forReact Developer',
+      image: './codeReviewFiles/React-Code-Review.png',
+      description: 'Provides tools for consistent branding across UI elements.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-React-Developers_v1.pdf',
+    },
+  
+    {
+      title: 'Code Review Handbook forVue Developers',
+      image: './codeReviewFiles/Vue-Code-Review.png',
+      description: 'Best practices for creating intuitive user interfaces.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-Vue-Developers-v1.pdf',
+    },
+    {
+      title: 'Code Review Handbook for JavaScript Developers',
+      image: './codeReviewFiles/JavaScript-Code-Review.png',
+      description: 'Stay ahead with the latest UI design trends.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-JavaScript-Developers-v1.pdf',
+    },
+    
+  ];
+
+  Components2: CarouselItem[] = [
+    {
+      title: 'Angular Upgrade Path: Ensuring Smooth Transitions Across Versions',
+      image: './angular-19.png',
+      description: 'Standardized components for rapid UI development.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Angular-Upgrade-Path-Ensuring-Smooth-Transitions-Across-Versions-v1.pdf',
     },
     {
       title: 'Code Review Handbook forReact Developer',
@@ -190,10 +219,94 @@ export class AppComponent {
       description: 'Stay ahead with the latest UI design trends.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-JavaScript-Developers-v1.pdf',
     },
-    
   ];
 
-  Components2: CarouselItem[] = [
+  
+  VersionUpgrade: CarouselItem[] = [
+    {
+      title: 'Angular Upgrade Path: Ensuring Smooth Transitions Across Versions',
+      image: './version-upgrade-process/Angular-Version-Upgrade-Process.png',
+      description: 'Standardized components for rapid UI development.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Angular-Upgrade-Path-Ensuring-Smooth-Transitions-Across-Versions-v1.pdf',
+    },
+    {
+      title: 'Code Review Handbook forReact Developer',
+      image: './Components-2.png',
+      description: 'Provides tools for consistent branding across UI elements.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-React-Developers_v1.pdf',
+    },
+  
+    {
+      title: 'Code Review Handbook forVue Developers',
+      image: './Components-4.png',
+      description: 'Best practices for creating intuitive user interfaces.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-Vue-Developers-v1.pdf',
+    },
+    {
+      title: 'Code Review Handbook for JavaScript Developers',
+      image: './best-practices-4.png',
+      description: 'Stay ahead with the latest UI design trends.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-JavaScript-Developers-v1.pdf',
+    },
+  ];
+
+  UnitTestingDocuments: CarouselItem[] = [
+    {
+      title: 'Angular Upgrade Path: Ensuring Smooth Transitions Across Versions',
+      image: './angular-19.png',
+      description: 'Standardized components for rapid UI development.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Angular-Upgrade-Path-Ensuring-Smooth-Transitions-Across-Versions-v1.pdf',
+    },
+    {
+      title: 'Code Review Handbook forReact Developer',
+      image: './Components-2.png',
+      description: 'Provides tools for consistent branding across UI elements.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-React-Developers_v1.pdf',
+    },
+  
+    {
+      title: 'Code Review Handbook forVue Developers',
+      image: './Components-4.png',
+      description: 'Best practices for creating intuitive user interfaces.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-Vue-Developers-v1.pdf',
+    },
+    {
+      title: 'Code Review Handbook for JavaScript Developers',
+      image: './best-practices-4.png',
+      description: 'Stay ahead with the latest UI design trends.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-JavaScript-Developers-v1.pdf',
+    },
+  ];
+
+  SonarQubeconfiguration: CarouselItem[] = [
+    {
+      title: 'Sonar Qube Setup and Configuration forAngular Applications',
+      image: './SonarQube/Angular-SonarQube.png',
+      description: 'Standardized components for rapid UI development.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Angular-Upgrade-Path-Ensuring-Smooth-Transitions-Across-Versions-v1.pdf',
+    },
+    {
+      title: 'Code Review Handbook forReact Developer',
+      image: './Components-2.png',
+      description: 'Provides tools for consistent branding across UI elements.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-React-Developers_v1.pdf',
+    },
+  
+    {
+      title: 'Code Review Handbook forVue Developers',
+      image: './Components-4.png',
+      description: 'Best practices for creating intuitive user interfaces.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-Vue-Developers-v1.pdf',
+    },
+    {
+      title: 'Code Review Handbook for JavaScript Developers',
+      image: './best-practices-4.png',
+      description: 'Stay ahead with the latest UI design trends.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-JavaScript-Developers-v1.pdf',
+    },
+  ];
+
+  CodePipeline: CarouselItem[] = [
     {
       title: 'Angular Upgrade Path: Ensuring Smooth Transitions Across Versions',
       image: './angular-19.png',
@@ -231,6 +344,33 @@ export class AppComponent {
     {
       title: 'Getting the Most Out of React 19: New Features and Best Practices',
       image: './Components-2.png',
+      description: 'Provides tools for consistent branding across UI elements.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Getting-the-Most-Out-of-React-19-New-Features-and-Best-Practices-v1.pdf',
+    },
+  
+    {
+      title: 'Code Review Handbook forVue Developers',
+      image: './Components-4.png',
+      description: 'Best practices for creating intuitive user interfaces.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-Vue-Developers-v1.pdf',
+    },
+    {
+      title: 'Code Review Handbook for JavaScript Developers',
+      image: './best-practices-4.png',
+      description: 'Stay ahead with the latest UI design trends.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-JavaScript-Developers-v1.pdf',
+    },
+  ];
+  NewFeatures: CarouselItem[] = [
+    {
+      title: 'Getting the Most Out of Angular 19: New Features and Best Practices',
+      image: './new-features/Angular-New-Features.png',
+      description: 'Standardized components for rapid UI development.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/Getting-the-Most-Out-of-Angular-19-New-Features-and-Best-Practices-v1.pdf',
+    },
+    {
+      title: 'Getting the Most Out of React 19: New Features and Best Practices',
+      image: './new-features/React-New-Features.png',
       description: 'Provides tools for consistent branding across UI elements.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Getting-the-Most-Out-of-React-19-New-Features-and-Best-Practices-v1.pdf',
     },

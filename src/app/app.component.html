@@ -34,7 +34,7 @@
     </header>
     <div class="banner">
       <h1>Innovate. Collaborate. Elevate</h1>
-      <p>Discover a consolidated source of UI/UX inspiration, best <br>practices and resources</p>
+      <p>Discover a consolidated source of UI/UX inspiration, best <br>practices and resources.</p>
     </div>
   </div>
 </section>
@@ -62,7 +62,7 @@
       </div>
     </div> 
 </section>
-<section class="bg-white">
+<section class="bg-grey">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
@@ -82,7 +82,7 @@
     </div>
   </div> 
 </section>
-<section class="bg-white">
+<section class="bg-grey">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
@@ -96,12 +96,12 @@
 <!--User Interface-->
 
        <div *ngIf="activeTab === 'user-interface'" class="user-interface">
-        <section class="bg-grey">
+        <section class="bg-white">
           <div class="container">
             <div class="tab-content inner-container">
         <div class="carousel-section">
           <h2 class="heading-split"><span>UI Frontend</span>Best practices</h2>
-          <app-carousel [items]="Components" [carouselId]="'ui-repository'"></app-carousel>
+          <app-carousel [items]="BestPractices" [carouselId]="'ui-repository'"></app-carousel>
           
         </div>
       </div>
@@ -112,7 +112,7 @@
         <div class="tab-content inner-container">
           <div class="carousel-section">
             <h2 class="heading-split"><span>Best Practices</span>Code Review Documents</h2>
-            <app-carousel [items]="Components1" [carouselId]="'ui-reposi'"></app-carousel>
+            <app-carousel [items]="CodeReview" [carouselId]="'ui-reposi'"></app-carousel>
           </div>
         </div>
       </div> 
@@ -122,18 +122,18 @@
         <div class="tab-content inner-container">
           <div class="carousel-section">
             <h2 class="heading-split"><span>Frontend </span> Reusable Components</h2>
-           <app-carousel [items]="EssentialsUIRepository" [carouselId]="'ux-innovations'"></app-carousel>
+           <app-carousel [items]="ReusableComponents " [carouselId]="'ux-innovations'"></app-carousel>
           </div>
         </div>
       </div> 
   </section>
 
-  <section class="bg-white">
+  <section class="bg-grey">
     <div class="container">
       <div class="tab-content inner-container">
         <div class="carousel-section">
           <h2 class="heading-split"><span>Frontend </span> New Features</h2>
-          <app-carousel [items]="Components3" [carouselId]="'new-features'"></app-carousel>
+          <app-carousel [items]="NewFeatures" [carouselId]="'new-features'"></app-carousel>
         </div>
       </div>
     </div> 
@@ -143,13 +143,13 @@
     <div class="tab-content inner-container">
       <div class="carousel-section">
         <h2 class="heading-split"><span>Frontend </span>Version Upgrade Process</h2>
-        <app-carousel [items]="Components2" [carouselId]="'v-u-Process'"></app-carousel>
+        <app-carousel [items]="VersionUpgrade" [carouselId]="'Version-Upgrade'"></app-carousel>
       </div>
     </div>
   </div> 
 </section>
 
-<section class="bg-white">
+<section class="bg-grey">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
@@ -164,6 +164,17 @@
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
+        <h2 class="heading-split"><span>Frontend </span>Unit Testing Documents </h2>
+        <app-carousel [items]="UnitTestingDocuments" [carouselId]="'UnitTestin'"></app-carousel>
+      </div>
+    </div>
+  </div> 
+</section>
+
+<section class="bg-grey">
+  <div class="container">
+    <div class="tab-content inner-container">
+      <div class="carousel-section">
         <h2 class="heading-split"><span>Frontend </span>Training Session Recordings</h2>
         <app-carousel [items]="Components2" [carouselId]="'t-d-recordings'"></app-carousel>
       </div>
@@ -171,16 +182,43 @@
   </div> 
 </section>
 
+<section class="bg-white">
+  <div class="container">
+    <div class="tab-content inner-container">
+      <div class="carousel-section">
+        <h2 class="heading-split"><span>Frontend </span>SonarQube configuration</h2>
+        <app-carousel [items]="SonarQubeconfiguration" [carouselId]="'SonarQube'"></app-carousel>
+      </div>
+    </div>
+  </div> 
+</section>
+
+<section class="bg-grey">
+  <div class="container">
+    <div class="tab-content inner-container">
+      <div class="carousel-section">
+        <h2 class="heading-split"><span>Frontend </span>CI-CD AWS Code Pipeline</h2>
+        <app-carousel [items]="CodePipeline" [carouselId]="'Code-Pipeline'"></app-carousel>
+      </div>
+    </div>
+  </div> 
+</section>
+
+
 
   
     </div>
 
 <footer class="footer">
   <div class="container">
-    <p>
+    <!-- <p>
       For queries & suggestions, write to us<br />
-      <a href="mailto:uiuxpractice@evoketechnologies.com">uiuxpractice-evoketechnologies.com</a>
+      uiuxpractice-evoketechnologies.com</a>
       <img src="./arrow-up.svg" alt="arrow up" title="arrow" />
-    </p>
+    </p> -->
+
+   <p> Copyright © Evoke Technologies | <a href="www.evoketechnologies.com">www.evoketechnologies.com    <img src="./arrow-up.svg" alt="arrow up" title="arrow" /></a> </p>
+
+   <p>  For any inquiries, please contact us at <a href="mailto:uiuxpractice@evoketechnologies.com">uiuxpractice&#64;evoketechnologies.com    <img src="./arrow-up.svg" alt="arrow up" title="arrow" /></a></p>
   </div>
 </footer>
