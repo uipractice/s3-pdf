@@ -250,9 +250,11 @@ padding-right: 50px;
     display: flex;
     flex-direction: column;
     width: 100%;
-    border: 1px solid rgba(24, 24, 24, 0.02);
+    border:0px solid rgba(24, 24, 24, 0.02);
     background: #FFF;
     box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.02);
+    text-align:left;
+    max-width:305px;
     &:hover {
       border: 1px solid rgba(24, 24, 24, 0.05);
       background:#FFF;
@@ -413,4 +415,35 @@ span{
   margin-top: 30px;
   float: left;
 }
+}
+
+.tabs-sticky {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+.tabs-sticky button {
+  background: #222;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.tabs-sticky button:hover {
+  background: #444;
+}
+
+.content-section {
+  height: 100vh;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ddd;
 }

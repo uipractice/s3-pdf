@@ -32,15 +32,28 @@
         </div> 
       </div>
     </header>
-    <div class="banner">
+    <div id="banner" class="banner">
       <h1>Innovate. Collaborate. Elevate</h1>
       <p>Discover a consolidated source of UI/UX inspiration, best <br>practices and resources.</p>
     </div>
   </div>
 </section>
 
+
+
+
 <!--User Experience-->
-      <div *ngIf="activeTab === 'user-experience'" class="user-experience">
+      <div id="test1" *ngIf="activeTab === 'user-experience'" class="user-experience">
+
+        <div class="tabs-sticky" *ngIf="showStickyTabs">
+          <button (click)="scrollToSection('test1')">Test 1</button>
+          <button (click)="scrollToSection('test2')">Test 2</button>
+          <button (click)="scrollToSection('test3')">Test 3</button>
+          <button (click)="scrollToSection('test4')">Test 4</button>
+          <button (click)="scrollToSection('test5')">Test 5</button>
+         
+        
+        </div>
         <section class="bg-grey">
           <div class="container">
             <div class="tab-content inner-container">
@@ -52,7 +65,7 @@
     </div>
   </section>
 
-  <section class="bg-white">
+  <section id="test2" class="bg-white">
     <div class="container">
       <div class="tab-content inner-container">
         <div class="carousel-section">
@@ -62,7 +75,7 @@
       </div>
     </div> 
 </section>
-<section class="bg-grey">
+<section id="test3" class="bg-grey">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
@@ -72,7 +85,7 @@
     </div>
   </div> 
 </section>
-<section class="bg-white">
+<section id="test4" class="bg-white">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
@@ -82,7 +95,7 @@
     </div>
   </div> 
 </section>
-<section class="bg-grey">
+<section id="test5" class="bg-grey">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
@@ -96,7 +109,23 @@
 <!--User Interface-->
 
        <div *ngIf="activeTab === 'user-interface'" class="user-interface">
-        <section class="bg-white">
+
+        <div class="tabs-sticky" *ngIf="showStickyTabs">
+          <button (click)="scrollToSection('test1')">Test 1</button>
+          <button (click)="scrollToSection('test2')">Test 2</button>
+          <button (click)="scrollToSection('test3')">Test 3</button>
+          <button (click)="scrollToSection('test4')">Test 4</button>
+          <button (click)="scrollToSection('test5')">Test 5</button>
+          <button (click)="scrollToSection('test6')">Test 6</button>
+          <button (click)="scrollToSection('test7')">Test 7</button>
+          <button (click)="scrollToSection('test8')">Test 8</button>
+          <button (click)="scrollToSection('test9')">Test 9</button>
+          <button (click)="scrollToSection('test10')">Test 10</button>
+        
+        </div>
+
+
+        <section id="test1"  class="bg-white">
           <div class="container">
             <div class="tab-content inner-container">
         <div class="carousel-section">
@@ -107,7 +136,7 @@
       </div>
       </div>
     </section>
-    <section class="bg-grey">
+    <section id="test2" class="bg-grey">
       <div class="container">
         <div class="tab-content inner-container">
           <div class="carousel-section">
@@ -117,7 +146,7 @@
         </div>
       </div> 
   </section>
-    <section class="bg-white">
+    <section id="test3" class="bg-white">
       <div class="container">
         <div class="tab-content inner-container">
           <div class="carousel-section">
@@ -128,7 +157,7 @@
       </div> 
   </section>
 
-  <section class="bg-grey">
+  <section id="test4" class="bg-grey">
     <div class="container">
       <div class="tab-content inner-container">
         <div class="carousel-section">
@@ -138,7 +167,7 @@
       </div>
     </div> 
 </section>
-<section class="bg-white">
+<section id="test5" class="bg-white">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
@@ -149,7 +178,7 @@
   </div> 
 </section>
 
-<section class="bg-grey">
+<section id="test6" class="bg-grey">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
@@ -160,7 +189,7 @@
   </div> 
 </section>
 
-<section class="bg-white">
+<section id="test7" class="bg-white">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
@@ -171,7 +200,7 @@
   </div> 
 </section>
 
-<section class="bg-grey">
+<section id="test8" class="bg-grey">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
@@ -182,7 +211,7 @@
   </div> 
 </section>
 
-<section class="bg-white">
+<section id="test9" class="bg-white">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
@@ -193,7 +222,7 @@
   </div> 
 </section>
 
-<section class="bg-grey">
+<section id="test10" class="bg-grey">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
