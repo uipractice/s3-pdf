@@ -13,6 +13,11 @@ import { CommonModule } from '@angular/common';
         <h3>{{ item.title }}</h3>
         <p>{{ item.description }}</p>
         <button (click)="viewDetails(item.pdfUrl)">View Details</button>
+
+        <ng-template #accessTemplate>
+      <button (click)="requestAccess(item)">Request Access</button>
+    </ng-template>
+
       </div>
     </div>
   `,
@@ -27,4 +32,8 @@ export class TabContentComponent {
       window.open(pdfUrl, '_blank');
     }
   }
+  requestAccess(item: any): void {
+  alert(`Access request for: ${item.title}`);
+  // Or trigger a modal / API request
+}
 }

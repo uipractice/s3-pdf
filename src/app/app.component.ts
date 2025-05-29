@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CommonModule } from '@angular/common';
 //import { SafeUrlPipe } from './pipes/safe-url.pipe';
@@ -8,7 +8,11 @@ interface CarouselItem {
   image: string;
   description: string;
   pdfUrl: string;
+  requiresAccess?: boolean;
+  mailtoLink?: string;
 }
+
+
 
 @Component({
   selector: 'app-root',
@@ -18,6 +22,10 @@ interface CarouselItem {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+activeStickyTab: any;
+scrollToSection(arg0: string) {
+throw new Error('Method not implemented.');
+}
   activeTab: string = 'user-experience';
   userExperienceItems: CarouselItem[] = [
     {
@@ -132,7 +140,7 @@ export class AppComponent {
     },
   
     {
-      title: 'Best Practices for Clean and High-PerformanceVue Applications',
+      title: 'Best Practices for Clean and High-Performance Vue Applications',
       image: './bestpractices/Vue-Best Practices.png',
       description: 'Stay ahead with the latest UI design trends.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-Vue-Applications-v1.pdf',
@@ -142,6 +150,12 @@ export class AppComponent {
       image: './bestpractices/JavaScript-Best-Practices.png',
       description: 'Keeps your designs aligned with the latest UX innovations.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-JavaScript-Applications-v1.pdf',
+    },
+       {
+      title: 'Best Practices for Building a Clean and High-Performance TypeScript Application',
+      image: './bestpractices/TypeScript-BestPractices.png',
+      description: 'Keeps your designs aligned with the latest UX innovations.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Buildinga-Clean-and-High-PerformanceTypeScript-Application-v1.pdf',
     },
     {
       title: 'Best Practices for Clean and High-Performance HTML Applications',
@@ -166,20 +180,20 @@ export class AppComponent {
 
   CodeReview: CarouselItem[] = [
     {
-      title: 'Code Review Handbook forAngular Developers',
+      title: 'Code Review Handbook for Angular Developers',
       image: './codeReviewFiles/Angular-Code-Review.png',
       description: 'Standardized components for rapid UI development.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-Angular-Developers.pdf',
     },
     {
-      title: 'Code Review Handbook forReact Developer',
+      title: 'Code Review Handbook for React Developer',
       image: './codeReviewFiles/React-Code-Review.png',
       description: 'Provides tools for consistent branding across UI elements.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-React-Developers.pdf',
     },
   
     {
-      title: 'Code Review Handbook forVue Developers',
+      title: 'Code Review Handbook for Vue Developers',
       image: './codeReviewFiles/Vue-Code-Review.png',
       description: 'Best practices for creating intuitive user interfaces.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-Vue-Developers.pdf',
@@ -201,14 +215,14 @@ export class AppComponent {
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Angular-Upgrade-Path-Ensuring-Smooth-Transitions-Across-Versions-v1.pdf',
     },
     {
-      title: 'Code Review Handbook forReact Developer',
+      title: 'Code Review Handbook for React Developer',
       image: './image-place-holder.png',
       description: 'Provides tools for consistent branding across UI elements.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-React-Developers_v1.pdf',
     },
   
     {
-      title: 'Code Review Handbook forVue Developers',
+      title: 'Code Review Handbook for Vue Developers',
       image: './image-place-holder.png',
       description: 'Best practices for creating intuitive user interfaces.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-Vue-Developers-v1.pdf',
@@ -218,6 +232,46 @@ export class AppComponent {
       image: './image-place-holder.png',
       description: 'Stay ahead with the latest UI design trends.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-JavaScript-Developers-v1.pdf',
+    },
+  ];
+
+  TrainingSession: CarouselItem[] = [
+    {
+      title: 'If you need access to the training session recordings, please contact us.',
+      image: './training-session/angular-training.png',
+      description: 'Standardized components for rapid UI development.',
+      pdfUrl: '',
+      requiresAccess: true,
+      mailtoLink: 'mailto:uiuxpractice@evoketechnologies.com?subject=Request Access - Angular',
+     },
+    {
+      title: 'If you need access to the training session recordings, please contact us.',
+      image: './training-session/react-training.png',
+      description: 'Provides tools for consistent branding across UI elements.',
+      pdfUrl: '',
+     requiresAccess: true,      
+      mailtoLink: 'mailto:uiuxpractice@evoketechnologies.com?subject=Request Access - React',
+
+    },
+  
+    {
+      title: 'If you need access to the training session recordings, please contact us.',
+      image: './training-session/node-training.png',
+      description: 'Best practices for creating intuitive user interfaces.',
+      pdfUrl: '',
+     requiresAccess: true,      
+    mailtoLink: 'mailto:uiuxpractice@evoketechnologies.com?subject=Request Access - NodeJs',
+
+      
+    },
+    {
+      title: 'If you need access to the training session recordings, please contact us.',
+      image: './training-session/vue-training.png',
+      description: 'Stay ahead with the latest UI design trends.',
+      pdfUrl: '',
+      requiresAccess: true,       
+          mailtoLink: 'mailto:uiuxpractice@evoketechnologies.com?subject=Request Access - Vue',
+     
     },
   ];
 
@@ -235,26 +289,54 @@ export class AppComponent {
   UnitTestingDocuments: CarouselItem[] = [
     {
       title: 'Angular Upgrade Path: Ensuring Smooth Transitions Across Versions',
-      image: './image-place-holder.png',
+      image: './unit-testing/angular-unit-testing.png',
       description: 'Standardized components for rapid UI development.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Angular-Upgrade-Path-Ensuring-Smooth-Transitions-Across-Versions-v1.pdf',
     },
     {
-      title: 'Code Review Handbook forReact Developer',
-      image: './image-place-holder.png',
+      title: 'Code Review Handbook for React Developer',
+      image: './unit-testing/react-unit-testing.png',
       description: 'Provides tools for consistent branding across UI elements.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-React-Developers_v1.pdf',
     },
   
     {
-      title: 'Code Review Handbook forVue Developers',
-      image: './image-place-holder.png',
+      title: 'Code Review Handbook for Node Developers',
+      image: './unit-testing/node-unit-testing.png',
       description: 'Best practices for creating intuitive user interfaces.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-Vue-Developers-v1.pdf',
     },
     {
-      title: 'Code Review Handbook for JavaScript Developers',
-      image: './image-place-holder.png',
+      title: 'Code Review Handbook for Vue Developers',
+      image: './unit-testing/vue-unit-testing.png',
+      description: 'Stay ahead with the latest UI design trends.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-JavaScript-Developers-v1.pdf',
+    },
+  ];
+
+  DesignPatterns: CarouselItem[] = [
+    {
+      title: 'Angular Upgrade Path: Ensuring Smooth Transitions Across Versions',
+      image: './Design-patterns/Angular-Design-Patterns.png',
+      description: 'Standardized components for rapid UI development.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Angular-Upgrade-Path-Ensuring-Smooth-Transitions-Across-Versions-v1.pdf',
+    },
+    {
+      title: 'Code Review Handbook for React Developer',
+      image: './Design-patterns/React-Design-Patterns.png',
+      description: 'Provides tools for consistent branding across UI elements.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-React-Developers_v1.pdf',
+    },
+  
+    {
+      title: 'Code Review Handbook for Node Developers',
+      image: './Design-patterns/Vue-Design-Patterns.png',
+      description: 'Best practices for creating intuitive user interfaces.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-Vue-Developers-v1.pdf',
+    },
+    {
+      title: 'Code Review Handbook for Vue Developers',
+      image: './Design-patterns/JavaScript-Design-Patterns.png',
       description: 'Stay ahead with the latest UI design trends.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-JavaScript-Developers-v1.pdf',
     },
@@ -262,7 +344,7 @@ export class AppComponent {
 
   SonarQubeconfiguration: CarouselItem[] = [
     {
-      title: 'Sonar Qube Setup and Configuration forAngular Applications',
+      title: 'Sonar Qube Setup and Configuration for Angular Applications',
       image: './SonarQube/Angular-SonarQube.png',
       description: 'Standardized components for rapid UI development.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/SonarQube-Setup-and-Configuration-for-Angular-Applications.pdf',
@@ -273,29 +355,10 @@ export class AppComponent {
   CodePipeline: CarouselItem[] = [
     {
       title: 'Angular Upgrade Path: Ensuring Smooth Transitions Across Versions',
-      image: './image-place-holder.png',
+      image: './ci-cd-pipeline.png',
       description: 'Standardized components for rapid UI development.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Angular-Upgrade-Path-Ensuring-Smooth-Transitions-Across-Versions-v1.pdf',
-    },
-    {
-      title: 'Code Review Handbook forReact Developer',
-      image: './image-place-holder.png',
-      description: 'Provides tools for consistent branding across UI elements.',
-      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-React-Developers_v1.pdf',
-    },
-  
-    {
-      title: 'Code Review Handbook forVue Developers',
-      image: './image-place-holder.png',
-      description: 'Best practices for creating intuitive user interfaces.',
-      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-Vue-Developers-v1.pdf',
-    },
-    {
-      title: 'Code Review Handbook for JavaScript Developers',
-      image: './image-place-holder.png',
-      description: 'Stay ahead with the latest UI design trends.',
-      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-JavaScript-Developers-v1.pdf',
-    },
+    }
   ];
 
  
@@ -317,26 +380,250 @@ export class AppComponent {
   ];
 
    // Debug method to log tab changes
-   onTabChange(tab: string) {
-    console.log('Switching to tab:', tab);
-    this.activeTab = tab;
-  }
+  //  onTabChange(tab: string) {
+  //   console.log('Switching to tab:', tab);
+  //   this.activeTab = tab;
+  // }
 
-  showStickyTabs = false;
+
+  // @HostListener('window:scroll', [])
+  // onScroll(): void {
+  //   const banner = document.getElementById('banner');
+  //   if (banner) {
+  //     const bannerBottom = banner.getBoundingClientRect().bottom;
+  //     this.showStickyTabs = bannerBottom !== 0;
+  //   }
+  // }
+
+  // scrollToSection(id: string) {
+  //   const section = document.getElementById(id);
+  //   if (section) {
+  //     section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  //   }
+  // }
+
+
+// For sticky underline tabs
+// activeStickyTab: string = '';
+// underlineStyle = {
+//   width: '0px',
+//   left: '0px',
+// };
+//   showStickyTabs = true;
+
+
+
+onTabChange(tab: string) {
+  console.log('Switching to tab:', tab);
+  this.activeTab = tab;
+}
+
+// @HostListener('window:scroll', [])
+// onScroll(): void {
+//   const banner = document.getElementById('banner');
+//   if (banner) {
+//     const bannerBottom = banner.getBoundingClientRect().bottom;
+//     this.showStickyTabs = bannerBottom !== 0;
+//   }
+// }
+
+// onStickyTabClick(tab: string, button: HTMLButtonElement): void {
+//   this.activeStickyTab = tab;
+
+//   const section = document.getElementById(tab);
+//   if (section) {
+//     section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+//   }
+
+//   const rect = button.getBoundingClientRect();
+//   const parentRect = button.parentElement!.getBoundingClientRect();
+
+//   this.underlineStyle = {
+//     width: `${rect.width}px`,
+//     left: `${rect.left - parentRect.left}px`,
+//   };
+// }
+
+//@ViewChild('tabScrollContainer', { static: false }) tabScrollContainer!: ElementRef;
+
+// tabList = [
+//   { id: 'latest-trends', label: 'Latest Trends' },
+//   { id: 'ux-resources', label: 'UX Resources' },
+//   { id: 'brand-design-hub', label: 'Brand & Design Hub' },
+//   { id: 'ux-performance-log', label: 'UX Performance Log' },
+//   { id: 'ux-documents', label: 'UX Documents' },
+//   { id: 'monthly-ux-meetings', label: 'Monthly UX Meetings' },
+// ];
+// activeStickyTab: string = '';
+// underlineStyle = { width: '0px', left: '0px' };
+// showStickyTabs = true;
+
+// @HostListener('window:scroll', [])
+// onScroll(): void {
+//   const banner = document.getElementById('banner');
+//   if (banner) {
+//     const bannerBottom = banner.getBoundingClientRect().bottom;
+//     this.showStickyTabs = bannerBottom !== 0;
+//   }
+// }
+
+// onStickyTabClick(tab: string, buttonEl: any): void {
+//   this.activeStickyTab = tab;
+
+//   const section = document.getElementById(tab);
+//   if (section) {
+//     section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+//   }
+
+//   const rect = buttonEl.getBoundingClientRect();
+//   const parentRect = buttonEl.parentElement!.getBoundingClientRect();
+
+//   this.underlineStyle = {
+//     width: `${rect.width}px`,
+//     left: `${rect.left - parentRect.left}px`,
+//   };
+// }
+
+// scrollTabs(direction: 'left' | 'right'): void {
+//   const scrollContainer = this.tabScrollContainer.nativeElement;
+//   const scrollAmount = 150;
+//   scrollContainer.scrollBy({
+//     left: direction === 'left' ? -scrollAmount : scrollAmount,
+//     behavior: 'smooth',
+//   });
+// }
+
+// @ViewChild('tabScrollContainer1', { static: false }) tabScrollContainer1!: ElementRef;
+//   @ViewChild('tabScrollContainer2', { static: false }) tabScrollContainer2!: ElementRef;
+
+//   tabList = [
+//     { id: 'latest-trends', label: 'Latest Trends' },
+//     { id: 'ux-resources', label: 'UX Resources' },
+//     { id: 'brand-design-hub', label: 'Brand & Design Hub' },
+//     { id: 'ux-performance-log', label: 'UX Performance Log' },
+//     { id: 'ux-documents', label: 'UX Documents' },
+//     { id: 'monthly-ux-meetings', label: 'Monthly UX Meetings' },
+//   ];
+
+//   secondTabList = [
+//     { id: 'test1', label: 'Best practices' },
+//     { id: 'test2', label: 'Code Review Handbook' },
+//     { id: 'test3', label: 'Reusable Components' },
+//     { id: 'test4', label: 'New Features' },
+//     { id: 'test5', label: 'Version Upgrade' },
+//     { id: 'test6', label: 'Design Patterns' },
+//     { id: 'test7', label: 'Unit Testing' },
+//     { id: 'test8', label: 'Training Session Recordings' },
+//     { id: 'test9', label: 'SonarQube configuration' },
+//     { id: 'test10', label: 'CI-CD Pipeline' },
+//   ];
+
+//   activeTab1 = '';
+//   activeTab2 = '';
+//   underlineStyle1 = { width: '0px', left: '0px' };
+//   underlineStyle2 = { width: '0px', left: '0px' };
+//   showStickyTabs = true;
+
+//   @HostListener('window:scroll', [])
+//   onScroll(): void {
+//     const banner = document.getElementById('banner');
+//     if (banner) {
+//       const bannerBottom = banner.getBoundingClientRect().bottom;
+//       this.showStickyTabs = bannerBottom !== 0;
+//     }
+//   }
+
+//   onStickyTabClick(tabId: string, button: HTMLElement, tabGroup: 'tab1' | 'tab2'): void {
+//     const section = document.getElementById(tabId);
+//     if (section) {
+//       section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+//     }
+
+//     const rect = button.getBoundingClientRect();
+//     const parentRect = button.parentElement!.getBoundingClientRect();
+//     const style = {
+//       width: `${rect.width}px`,
+//       left: `${rect.left - parentRect.left}px`,
+//     };
+
+//     if (tabGroup === 'tab1') {
+//       this.activeTab1 = tabId;
+//       this.underlineStyle1 = style;
+//     } else {
+//       this.activeTab2 = tabId;
+//       this.underlineStyle2 = style;
+//     }
+//   }
+
+//   scrollTabs(direction: 'left' | 'right', group: 'tab1' | 'tab2'): void {
+//     const scrollContainer = group === 'tab1' ? this.tabScrollContainer1.nativeElement : this.tabScrollContainer2.nativeElement;
+//     const scrollAmount = 150;
+//     scrollContainer.scrollBy({
+//       left: direction === 'left' ? -scrollAmount : scrollAmount,
+//       behavior: 'smooth',
+//     });
+//   }
+
+@ViewChild('tabScrollContainer1', { static: false }) tabScrollContainer1!: ElementRef;
+  @ViewChild('tabScrollContainer2', { static: false }) tabScrollContainer2!: ElementRef;
+
+  tabList = [
+    { id: 'latest-trends', label: 'Latest Trends' },
+    { id: 'ux-resources', label: 'UX Resources' },
+    { id: 'brand-design-hub', label: 'Brand & Design Hub' },
+    { id: 'ux-performance-log', label: 'UX Performance Log' },
+    { id: 'ux-documents', label: 'UX Documents' },
+    { id: 'monthly-ux-meetings', label: 'Monthly UX Meetings' },
+  ];
+
+  secondTabList = [
+    { id: 'test1', label: 'Best practices' },
+    { id: 'test2', label: 'Code Review Handbook' },
+    { id: 'test3', label: 'Reusable Components' },
+    { id: 'test4', label: 'New Features' },
+    { id: 'test5', label: 'Version Upgrade' },
+    { id: 'test6', label: 'Design Patterns' },
+    { id: 'test7', label: 'Unit Testing' },
+    { id: 'test8', label: 'Training Session Recordings' },
+    { id: 'test9', label: 'SonarQube configuration' },
+    { id: 'test10', label: 'CI-CD Pipeline' },
+  ];
+
+  activeTab1 = '';
+  activeTab2 = '';
+  showStickyTabs = true;
 
   @HostListener('window:scroll', [])
   onScroll(): void {
     const banner = document.getElementById('banner');
     if (banner) {
       const bannerBottom = banner.getBoundingClientRect().bottom;
-      this.showStickyTabs = bannerBottom <= 0;
+      this.showStickyTabs = bannerBottom !== 0;
     }
   }
 
-  scrollToSection(id: string) {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+ onStickyTabClick(tabId: string, tabGroup: 'tab1' | 'tab2'): void {
+  const section = document.getElementById(tabId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  if (tabGroup === 'tab1') {
+    this.activeTab1 = tabId;
+  } else {
+    this.activeTab2 = tabId;
+  }
+}
+
+  scrollTabs(direction: 'left' | 'right', group: 'tab1' | 'tab2'): void {
+    const scrollContainer = group === 'tab1' 
+      ? this.tabScrollContainer1.nativeElement 
+      : this.tabScrollContainer2.nativeElement;
+
+    const scrollAmount = 150;
+    scrollContainer.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth',
+    });
   }
 }

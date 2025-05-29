@@ -26,13 +26,39 @@ import { Navigation } from 'swiper/modules';
               </div>
               <h3>{{ item.title }}</h3>
               <p>{{ item.description }}</p>
-              <a
-                [href]="item.pdfUrl"
-                target="_blank"
-                class="view-details"
-              >
-                View Details <span>→</span>
-              </a>
+              <!-- <ng-container *ngIf="!item.requiresAccess; else accessRequest">
+          <a
+            [href]="item.pdfUrl"
+            target="_blank"
+            class="view-details"
+          >
+            View Details <span>→</span>
+          </a>
+        </ng-container>
+
+        <ng-template #accessRequest>
+       <a  class="view-details"  [href]="item.pdfUrl">
+            Request access <span>→</span>
+          </a>
+        </ng-template> -->
+              <ng-container *ngIf="item.requiresAccess && item.mailtoLink; else showPdfLink">
+  <a
+    class="view-details"
+    [href]="item.mailtoLink"
+  >
+    Request access <span>→</span>
+  </a>
+</ng-container>
+
+<ng-template #showPdfLink>
+  <a
+    class="view-details"
+    [href]="item.pdfUrl"
+    target="_blank"
+  >
+    View Details <span>→</span>
+  </a>
+</ng-template>
             </div>
           </div>
         </div>

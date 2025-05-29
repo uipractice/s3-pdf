@@ -45,7 +45,7 @@
 <!--User Experience-->
       <div id="test1" *ngIf="activeTab === 'user-experience'" class="user-experience">
 
-        <div class="tabs-sticky" *ngIf="showStickyTabs">
+        <!-- <div class="tabs-sticky" *ngIf="showStickyTabs">
           <button (click)="scrollToSection('test1')">Test 1</button>
           <button (click)="scrollToSection('test2')">Test 2</button>
           <button (click)="scrollToSection('test3')">Test 3</button>
@@ -53,53 +53,133 @@
           <button (click)="scrollToSection('test5')">Test 5</button>
          
         
-        </div>
-        <section class="bg-grey">
+        </div> -->
+        <!-- <div class="tabs-sticky" *ngIf="showStickyTabs">
+  <button #btn1 (click)="onStickyTabClick('test1', btn1)" [class.active-tab]="activeStickyTab === 'test1'">Test 1</button>
+  <button #btn2 (click)="onStickyTabClick('test2', btn2)" [class.active-tab]="activeStickyTab === 'test2'">Test 2</button>
+  <button #btn3 (click)="onStickyTabClick('test3', btn3)" [class.active-tab]="activeStickyTab === 'test3'">Test 3</button>
+  <div class="tab-underline" [ngStyle]="underlineStyle"></div>
+</div> -->
+
+  <!-- <div class="tabs-sticky" *ngIf="showStickyTabs" #tabScrollContainer>
+     <button
+      *ngFor="let tab of tabList"
+      (click)="onStickyTabClick(tab.id, $event.target)"
+      [class.active-tab]="activeStickyTab === tab.id"
+    >
+      {{ tab.label }}
+    </button>
+
+    <div class="tab-underline" [ngStyle]="underlineStyle"></div>
+    <div class="right-arrow"> 
+  <button class="scroll-btn left" (click)="scrollTabs('left')">&#8249;</button>
+  <button class="scroll-btn right" (click)="scrollTabs('right')">&#8250;</button>
+  </div>
+  </div> -->
+
+ <!-- <div class="tabs-sticky" *ngIf="showStickyTabs">
+  <div class="tab-buttons-scroll" #tabScrollContainer1>
+      <button
+    *ngFor="let tab of tabList"
+    #btn
+    (click)="onStickyTabClick(tab.id, btn, 'tab1')"
+    [class.active-tab]="activeStickyTab === tab.id"
+  >
+    {{ tab.label }}
+  </button>
+    <div class="tab-underline" [ngStyle]="underlineStyle1"></div>
+  </div>
+    <div class="right-arrow"> 
+  <button class="scroll-btn" (click)="scrollTabs('left', 'tab1')">&#8592;</button>
+  <button class="scroll-btn" (click)="scrollTabs('right', 'tab1')">&#8594;</button>
+  </div>
+</div> -->
+<div class="tabs-sticky" *ngIf="showStickyTabs">
+  <div class="tab-buttons-scroll center-tab" #tabScrollContainer1>
+ <button class="active-tab"
+  *ngFor="let tab of tabList"
+  (click)="onStickyTabClick(tab.id, 'tab1')"
+  [class.active-tab]="activeTab1 === tab.id"
+>
+  {{ tab.label }}
+</button>
+  </div>
+  <div class="right-arrow">
+    <button class="scroll-btn" (click)="scrollTabs('left', 'tab1')">&#8249;</button>
+    <button class="scroll-btn" (click)="scrollTabs('right', 'tab1')">&#8250;</button>
+  </div>
+</div>
+
+
+        <section id="latest-trends" class="latest-trends">
           <div class="container">
             <div class="tab-content inner-container">
         <div class="carousel-section">
-          <h2 class="heading-split"><span>Latest</span> Latest Trends</h2>
+          <h2 class="heading-split"> Latest Trends</h2>
           <app-carousel [items]="userExperienceItems" [carouselId]="'ux-innovations'"></app-carousel>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="test2" class="bg-white">
+  <section id="ux-resources" class="bg-white">
     <div class="container">
       <div class="tab-content inner-container">
         <div class="carousel-section">
-          <h2 class="heading-split"><span>UX Latest</span>UX Resources</h2>
+          <h2 class="heading-split">UX Resources</h2>
           <app-carousel [items]="userInterfaceItems" [carouselId]="'ui-repository'"></app-carousel>
         </div>
       </div>
     </div> 
 </section>
-<section id="test3" class="bg-grey">
+<section id="brand-design-hub" class="bg-grey">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
-        <h2 class="heading-split"><span>UX Latest</span>Brand & Design Hub</h2>
+        <h2 class="heading-split">UX Performance Log</h2>
         <app-carousel [items]="userInterfaceItems" [carouselId]="'ui-repository'"></app-carousel>
       </div>
     </div>
   </div> 
 </section>
-<section id="test4" class="bg-white">
+<section id="ux-documents" class="bg-white">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
-        <h2 class="heading-split"><span>UX Latest</span>UX Documents</h2>
+        <h2 class="heading-split">UX Documents</h2>
         <app-carousel [items]="userInterfaceItems" [carouselId]="'ui-repository'"></app-carousel>
       </div>
     </div>
   </div> 
 </section>
-<section id="test5" class="bg-grey">
+<section id="monthly-ux-meetings" class="bg-grey">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
-        <h2 class="heading-split"><span>UX Latest</span>Monthly UX Meetings</h2>
+        <h2 class="heading-split">Monthly UX Meetings</h2>
+        <app-carousel [items]="userInterfaceItems" [carouselId]="'ui-repository'"></app-carousel>
+      </div>
+    </div>
+  </div> 
+</section>
+
+
+<section id="ux-documents" class="bg-grey">
+  <div class="container">
+    <div class="tab-content inner-container">
+      <div class="carousel-section">
+        <h2 class="heading-split">UX Documents</h2>
+        <app-carousel [items]="userInterfaceItems" [carouselId]="'ui-repository'"></app-carousel>
+      </div>
+    </div>
+  </div> 
+</section>
+
+<section id="monthly-ux-meetings" class="bg-grey">
+  <div class="container">
+    <div class="tab-content inner-container">
+      <div class="carousel-section">
+        <h2 class="heading-split">Monthly UX Meetings</h2>
         <app-carousel [items]="userInterfaceItems" [carouselId]="'ui-repository'"></app-carousel>
       </div>
     </div>
@@ -110,26 +190,27 @@
 
        <div *ngIf="activeTab === 'user-interface'" class="user-interface">
 
-        <div class="tabs-sticky" *ngIf="showStickyTabs">
-          <button (click)="scrollToSection('test1')">Test 1</button>
-          <button (click)="scrollToSection('test2')">Test 2</button>
-          <button (click)="scrollToSection('test3')">Test 3</button>
-          <button (click)="scrollToSection('test4')">Test 4</button>
-          <button (click)="scrollToSection('test5')">Test 5</button>
-          <button (click)="scrollToSection('test6')">Test 6</button>
-          <button (click)="scrollToSection('test7')">Test 7</button>
-          <button (click)="scrollToSection('test8')">Test 8</button>
-          <button (click)="scrollToSection('test9')">Test 9</button>
-          <button (click)="scrollToSection('test10')">Test 10</button>
-        
-        </div>
-
+       <div class="tabs-sticky" *ngIf="showStickyTabs">
+  <div class="tab-buttons-scroll" #tabScrollContainer2>
+ <button
+  *ngFor="let tab of secondTabList"
+  (click)="onStickyTabClick(tab.id, 'tab2')"
+  [class.active-tab]="activeTab2 === tab.id"
+>
+  {{ tab.label }}
+</button>
+  </div>
+  <div class="right-arrow">
+    <button class="scroll-btn" (click)="scrollTabs('left', 'tab2')">&#8249;</button>
+    <button class="scroll-btn" (click)="scrollTabs('right', 'tab2')">&#8250;</button>
+  </div>
+</div>
 
         <section id="test1"  class="bg-white">
           <div class="container">
             <div class="tab-content inner-container">
         <div class="carousel-section">
-          <h2 class="heading-split"><span>UI Frontend</span>Best practices</h2>
+          <h2 class="heading-split">Best practices</h2>
           <app-carousel [items]="BestPractices" [carouselId]="'ui-repository'"></app-carousel>
           
         </div>
@@ -140,7 +221,7 @@
       <div class="container">
         <div class="tab-content inner-container">
           <div class="carousel-section">
-            <h2 class="heading-split"><span>Best Practices</span>Code Review Documents</h2>
+            <h2 class="heading-split">Code Review Handbook</h2>
             <app-carousel [items]="CodeReview" [carouselId]="'ui-reposi'"></app-carousel>
           </div>
         </div>
@@ -150,7 +231,7 @@
       <div class="container">
         <div class="tab-content inner-container">
           <div class="carousel-section">
-            <h2 class="heading-split"><span>Frontend </span> Reusable Components</h2>
+            <h2 class="heading-split">Reusable Components</h2>
            <app-carousel [items]="ReusableComponents " [carouselId]="'ux-innovations'"></app-carousel>
           </div>
         </div>
@@ -161,7 +242,7 @@
     <div class="container">
       <div class="tab-content inner-container">
         <div class="carousel-section">
-          <h2 class="heading-split"><span>Frontend </span> New Features</h2>
+          <h2 class="heading-split"> New Features</h2>
           <app-carousel [items]="NewFeatures" [carouselId]="'new-features'"></app-carousel>
         </div>
       </div>
@@ -171,7 +252,7 @@
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
-        <h2 class="heading-split"><span>Frontend </span>Version Upgrade Process</h2>
+        <h2 class="heading-split">Version Upgrade</h2>
         <app-carousel [items]="VersionUpgrade" [carouselId]="'Version-Upgrade'"></app-carousel>
       </div>
     </div>
@@ -182,7 +263,7 @@
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
-        <h2 class="heading-split"><span>Frontend </span>Design Patterns </h2>
+        <h2 class="heading-split">Design Patterns </h2>
         <app-carousel [items]="Components2" [carouselId]="'d-patterns'"></app-carousel>
       </div>
     </div>
@@ -193,7 +274,7 @@
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
-        <h2 class="heading-split"><span>Frontend </span>Unit Testing Documents </h2>
+        <h2 class="heading-split">Unit Testing</h2>
         <app-carousel [items]="UnitTestingDocuments" [carouselId]="'UnitTestin'"></app-carousel>
       </div>
     </div>
@@ -204,8 +285,8 @@
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
-        <h2 class="heading-split"><span>Frontend </span>Training Session Recordings</h2>
-        <app-carousel [items]="Components2" [carouselId]="'t-d-recordings'"></app-carousel>
+        <h2 class="heading-split">Training Session Recordings</h2>
+        <app-carousel [items]="TrainingSession" [carouselId]="'Training-Session'"></app-carousel>
       </div>
     </div>
   </div> 
@@ -215,7 +296,7 @@
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
-        <h2 class="heading-split"><span>Frontend </span>SonarQube configuration</h2>
+        <h2 class="heading-split">SonarQube configuration</h2>
         <app-carousel [items]="SonarQubeconfiguration" [carouselId]="'SonarQube'"></app-carousel>
       </div>
     </div>
@@ -226,7 +307,7 @@
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
-        <h2 class="heading-split"><span>Frontend </span>CI-CD AWS Code Pipeline</h2>
+        <h2 class="heading-split">CI-CD Pipeline</h2>
         <app-carousel [items]="CodePipeline" [carouselId]="'Code-Pipeline'"></app-carousel>
       </div>
     </div>
@@ -246,8 +327,9 @@
       <img src="./arrow-up.svg" alt="arrow up" title="arrow" />
     </p> -->
 
-   <p> Copyright © Evoke Technologies | <a href="www.evoketechnologies.com">www.evoketechnologies.com    <img src="./arrow-up.svg" alt="arrow up" title="arrow" /></a> </p>
+   <p> Copyright © Evoke Technologies | <a href="www.evoketechnologies.com">www.evoketechnologies.com    </a> </p>
 
-   <p>  For any inquiries, please contact us at <a href="mailto:uiuxpractice@evoketechnologies.com">uiuxpractice&#64;evoketechnologies.com    <img src="./arrow-up.svg" alt="arrow up" title="arrow" /></a></p>
+   <p>  For any inquiries, please contact us at <a href="mailto:uiuxpractice@evoketechnologies.com">uiuxpractice&#64;evoketechnologies.com    </a></p>
   </div>
 </footer>
+<!-- <img src="./arrow-up.svg" alt="arrow up" title="arrow" /> -->
