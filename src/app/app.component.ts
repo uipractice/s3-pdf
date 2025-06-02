@@ -96,6 +96,57 @@ throw new Error('Method not implemented.');
     },
   ];
 
+   latestTrends: CarouselItem[] = [
+    {
+      title: 'Best Practices for Clean and High-Performance Angular Application',
+      image: './latest-trends/smashing-magazine.png',
+      description: 'Provides tools for consistent branding across UI elements.',
+      pdfUrl: 'https://www.smashingmagazine.com/',
+    },
+    {
+      title: 'Getting the Most Out of React 19: New Features and Best Practices',
+      image: './latest-trends/nng.png',
+      description: 'Standardized components for rapid UI development.',
+      pdfUrl: 'https://www.nngroup.com/',
+    },
+    {
+      title: 'UI Guidelines and Best Practices',
+      image: './latest-trends/ux-design.png',
+      description: 'Best practices for creating intuitive user interfaces.',
+      pdfUrl: 'https://uxdesign.cc/',
+    },
+    {
+      title: 'Updated evolving UI trends',
+      image: './latest-trends/awwwards.png',
+      description: 'Stay ahead with the latest UI design trends.',
+      pdfUrl: 'https://www.awwwards.com/',
+    },
+     {
+      title: 'Updated evolving UI trends',
+      image: './latest-trends/muzil.png',
+      description: 'Stay ahead with the latest UI design trends.',
+      pdfUrl: 'https://muz.li/',
+    },
+     {
+      title: 'Updated evolving UI trends',
+      image: './latest-trends/adobe-xd-Ideas.png',
+      description: 'Stay ahead with the latest UI design trends.',
+      pdfUrl: 'https://xd.adobe.com/ideas/',
+    },
+     {
+      title: 'Updated evolving UI trends',
+      image: './latest-trends/ux-planet.png',
+      description: 'Stay ahead with the latest UI design trends.',
+      pdfUrl: 'https://uxplanet.org/',
+    },
+      {
+      title: 'Updated evolving UI trends',
+      image: './latest-trends/behance.png',
+      description: 'Stay ahead with the latest UI design trends.',
+      pdfUrl: 'https://www.behance.net/',
+    },
+  ];
+
   userInterfaceItems: CarouselItem[] = [
     {
       title: 'Best Practices for Clean and High-Performance Angular Application',
@@ -114,6 +165,35 @@ throw new Error('Method not implemented.');
       image: './image-place-holder.png',
       description: 'Best practices for creating intuitive user interfaces.',
       pdfUrl: 'https://dashboard-ui-ux-pdfs.s3.ap-south-1.amazonaws.com/test1.pdf',
+    },
+    {
+      title: 'Updated evolving UI trends',
+      image: './image-place-holder.png',
+      description: 'Stay ahead with the latest UI design trends.',
+      pdfUrl: 'https://dashboard-ui-ux-pdfs.s3.ap-south-1.amazonaws.com/test1.pdf',
+    },
+  ];
+
+
+
+  BrandDesignHub: CarouselItem[] = [
+    {
+      title: 'Why Style Guides Matter: Clarity, Consistency, Communication',
+      image: './image-place-holder.png',
+      description: 'Provides tools for consistent branding across UI elements.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UX/Evoke-Brand-Guidelines.pdf',
+    },
+    {
+      title: 'Evoke Design System Empowering Iterative Collaboration',
+      image: './image-place-holder.png',
+      description: 'Standardized components for rapid UI development.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UX/Evoke-Design-System.pdf',
+    },
+    {
+      title: 'Tools to Conduct Surveys-Like Customer, User',
+      image: './image-place-holder.png',
+      description: 'Best practices for creating intuitive user interfaces.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UX/UX-Tools.pdf',
     },
     {
       title: 'Updated evolving UI trends',
@@ -254,16 +334,7 @@ throw new Error('Method not implemented.');
 
     },
   
-    {
-      title: 'If you need access to the training session recordings, please contact us.',
-      image: './training-session/node-training.png',
-      description: 'Best practices for creating intuitive user interfaces.',
-      pdfUrl: '',
-     requiresAccess: true,      
-    mailtoLink: 'mailto:uiuxpractice@evoketechnologies.com?subject=Request Access - NodeJs',
-
-      
-    },
+   
     {
       title: 'If you need access to the training session recordings, please contact us.',
       image: './training-session/vue-training.png',
@@ -273,6 +344,16 @@ throw new Error('Method not implemented.');
           mailtoLink: 'mailto:uiuxpractice@evoketechnologies.com?subject=Request Access - Vue',
      
     },
+     {
+      title: 'If you need access to the training session recordings, please contact us.',
+      image: './training-session/node-training.png',
+      description: 'Best practices for creating intuitive user interfaces.',
+      pdfUrl: '',
+     requiresAccess: true,      
+    mailtoLink: 'mailto:uiuxpractice@evoketechnologies.com?subject=Request Access - NodeJs',
+
+      
+    }
   ];
 
   
@@ -294,49 +375,50 @@ throw new Error('Method not implemented.');
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Angular-Upgrade-Path-Ensuring-Smooth-Transitions-Across-Versions-v1.pdf',
     },
     {
-      title: 'Code Review Handbook for React Developer',
+      title: 'React Unit Testing: A Complete Guide',
       image: './unit-testing/react-unit-testing.png',
       description: 'Provides tools for consistent branding across UI elements.',
-      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-React-Developers_v1.pdf',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/React-Unit-Testing-A-Complete-Guide-v1.pdf',
     },
   
-    {
-      title: 'Code Review Handbook for Node Developers',
-      image: './unit-testing/node-unit-testing.png',
-      description: 'Best practices for creating intuitive user interfaces.',
-      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-Vue-Developers-v1.pdf',
-    },
+    
     {
       title: 'Code Review Handbook for Vue Developers',
       image: './unit-testing/vue-unit-testing.png',
       description: 'Stay ahead with the latest UI design trends.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-JavaScript-Developers-v1.pdf',
     },
+    {
+      title: 'JavaScript Unit Testing A Complete Guides',
+      image: './unit-testing/node-unit-testing.png',
+      description: 'Best practices for creating intuitive user interfaces.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/JavaScript-Unit-Testing-A-Complete-Guide-v1.pdf',
+    },
   ];
 
   DesignPatterns: CarouselItem[] = [
     {
       title: 'Angular Upgrade Path: Ensuring Smooth Transitions Across Versions',
-      image: './Design-patterns/Angular-Design-Patterns.png',
+      image: './Design-patterns/angular-design.png',
       description: 'Standardized components for rapid UI development.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Angular-Upgrade-Path-Ensuring-Smooth-Transitions-Across-Versions-v1.pdf',
     },
     {
       title: 'Code Review Handbook for React Developer',
-      image: './Design-patterns/React-Design-Patterns.png',
+      image: './Design-patterns/react-design.png',
       description: 'Provides tools for consistent branding across UI elements.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-React-Developers_v1.pdf',
     },
   
     {
       title: 'Code Review Handbook for Node Developers',
-      image: './Design-patterns/Vue-Design-Patterns.png',
+      image: './Design-patterns/vue-design.png',
       description: 'Best practices for creating intuitive user interfaces.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-Vue-Developers-v1.pdf',
     },
     {
       title: 'Code Review Handbook for Vue Developers',
-      image: './Design-patterns/JavaScript-Design-Patterns.png',
+      image: './Design-patterns/javascript-design.png',
       description: 'Stay ahead with the latest UI design trends.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-JavaScript-Developers-v1.pdf',
     },
@@ -379,39 +461,7 @@ throw new Error('Method not implemented.');
    
   ];
 
-   // Debug method to log tab changes
-  //  onTabChange(tab: string) {
-  //   console.log('Switching to tab:', tab);
-  //   this.activeTab = tab;
-  // }
-
-
-  // @HostListener('window:scroll', [])
-  // onScroll(): void {
-  //   const banner = document.getElementById('banner');
-  //   if (banner) {
-  //     const bannerBottom = banner.getBoundingClientRect().bottom;
-  //     this.showStickyTabs = bannerBottom !== 0;
-  //   }
-  // }
-
-  // scrollToSection(id: string) {
-  //   const section = document.getElementById(id);
-  //   if (section) {
-  //     section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  //   }
-  // }
-
-
-// For sticky underline tabs
-// activeStickyTab: string = '';
-// underlineStyle = {
-//   width: '0px',
-//   left: '0px',
-// };
-//   showStickyTabs = true;
-
-
+   
 
 onTabChange(tab: string) {
   console.log('Switching to tab:', tab);

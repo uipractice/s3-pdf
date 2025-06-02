@@ -155,6 +155,8 @@ background: #F8F8F8;
   }
 .tab-content {
   padding:48px 0;
+  padding-bottom:0px;
+
 }
 
 .user-experience,
@@ -222,7 +224,7 @@ margin-bottom:0px;
   /**********/
   .swiper {
     width: 100%;
-    padding: 40px 40px 55px 40px;
+    padding: 40px 40px 105px 55px;
     position: relative;
   }
   
@@ -433,21 +435,15 @@ span{
 display:none;
 }
 
-
-// .tabs-sticky {
-//   position: relative;
-//   display: flex;
-//   gap: 10px;
-// }
 .tabs-sticky {
   position: sticky;
   top: 0;
   background: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-   z-index: 1000;
+  z-index: 1000;
   border-bottom: 1px solid #ddd;
-  padding:0px 85px;
-}
+  padding: 0px 102px 0px 60px;
+  }
 
 
 
@@ -473,11 +469,11 @@ display:none;
 
 .right-arrow {
     position: absolute;
-    right: 6px;
-    top: -10px;
+    right:12px;
+    top:10px;
     .scroll-btn {
-      font-size:50px;
-      margin-right: 10px;
+      padding-top: 14px;
+    margin-left: 20px;
     }
 }
 
@@ -502,7 +498,7 @@ justify-content: flex-start;
 .tab-buttons-scroll button {
   background: none;
   border: none;
-  padding: 25px 16px;
+  padding:27px 16px 24px 16px;
   font-size: 16px;
   white-space: nowrap;
   cursor: pointer;
@@ -519,4 +515,12 @@ justify-content: flex-start;
 
 .center-tab {
   justify-content: center;
+}
+
+.rotate-btn {
+  rotate:180deg;
+}
+
+#test6 .swiper-btn, #test7 .swiper-btn, #test8 .swiper-btn {
+  display:none;
 }

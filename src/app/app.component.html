@@ -55,10 +55,10 @@
   {{ tab.label }}
 </button>
   </div>
-  <div class="right-arrow">
+  <!-- <div class="right-arrow">
     <button class="scroll-btn" (click)="scrollTabs('left', 'tab1')">&#8249;</button>
     <button class="scroll-btn" (click)="scrollTabs('right', 'tab1')">&#8250;</button>
-  </div>
+  </div> -->
 </div>
 
 
@@ -67,7 +67,7 @@
             <div class="tab-content inner-container">
         <div class="carousel-section">
           <h2 class="heading-split"> Latest Trends</h2>
-          <app-carousel [items]="userExperienceItems" [carouselId]="'ux-innovations'"></app-carousel>
+          <app-carousel [items]="latestTrends" [carouselId]="'latest-trends'"></app-carousel>
         </div>
       </div>
     </div>
@@ -88,7 +88,7 @@
     <div class="tab-content inner-container">
       <div class="carousel-section">
         <h2 class="heading-split">Brand & Design Hub</h2>
-        <app-carousel [items]="userInterfaceItems" [carouselId]="'ui-repository'"></app-carousel>
+        <app-carousel [items]="BrandDesignHub" [carouselId]="'BrandDesign-Hub'"></app-carousel>
       </div>
     </div>
   </div> 
@@ -142,8 +142,8 @@
 </button>
   </div>
   <div class="right-arrow">
-    <button class="scroll-btn" (click)="scrollTabs('left', 'tab2')">&#8249;</button>
-    <button class="scroll-btn" (click)="scrollTabs('right', 'tab2')">&#8250;</button>
+    <button class="scroll-btn" (click)="scrollTabs('left', 'tab2')"><img src="./arrow-left.svg" alt="arrow" width="14px"  title="Arrow left"></button>
+    <button class="scroll-btn rotate-btn" (click)="scrollTabs('right', 'tab2')"><img src="./arrow-left.svg" alt="arrow" width="14px"  title="Arrow right"></button>
   </div>
 </div>
 
@@ -205,7 +205,7 @@
     <div class="tab-content inner-container">
       <div class="carousel-section">
         <h2 class="heading-split">Design Patterns </h2>
-        <app-carousel [items]="Components2" [carouselId]="'d-patterns'"></app-carousel>
+        <app-carousel [items]="DesignPatterns" [carouselId]="'d-patterns'"></app-carousel>
       </div>
     </div>
   </div> 
