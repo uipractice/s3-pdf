@@ -439,7 +439,7 @@ throw new Error('Method not implemented.');
       title: 'Angular Upgrade Path: Ensuring Smooth Transitions Across Versions',
       image: './ci-cd-pipeline.png',
       description: 'Standardized components for rapid UI development.',
-      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Angular-Upgrade-Path-Ensuring-Smooth-Transitions-Across-Versions-v1.pdf',
+      pdfUrl: '#',
     }
   ];
 
