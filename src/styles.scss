@@ -147,11 +147,9 @@ background:#080808;
 }
 .bg-grey{
 background: #F8F8F8;
-// padding:40px 0px 55px 0px;
 }
 .bg-white{
   background:#fff;
-  // padding:40px 0px 55px 0px;
   }
 .tab-content {
   padding:48px 0;
@@ -244,8 +242,6 @@ margin-bottom:0px;
   }
   
   .carousel-item {
-    // background-color: #fff;
-    // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     min-height:313px;
     display: flex;
@@ -271,21 +267,11 @@ margin-bottom:0px;
   
   .carousel-item h3 {
     margin:20px 20px 0px;
-    // color: #181818;
-    // font-size: 22px;
-    // font-weight: 500;
-    // line-height: 34px;
-    // padding-bottom:16px;
-    // border-bottom: 1px solid;
-    // border-color:rgba(24, 24, 24, 0.1);
-    // text-align: left;
     color: #181818;
     font-size: 20px;
     font-weight: 500;
     line-height: 28px;
     padding-bottom: 16px;
-    // border-bottom: 1px solid;
-    // border-color: #1818181a;
     text-align: left;
     letter-spacing: 0.6px;
     min-height:83px;
@@ -469,26 +455,26 @@ display:none;
 
 .right-arrow {
     position: absolute;
-    right:12px;
-    top:10px;
+  right: 20px;
+    top: 16px;
     .scroll-btn {
-      padding-top: 14px;
+      padding-top:13px;
     margin-left: 20px;
     }
 }
 
 .tab-buttons-scroll {
-  position: relative;
-  display: inline-block;
-  min-width: 100%;
-   display: flex;
+position: relative;
+display: inline-block;
+min-width: 100%;
+display: flex;
 justify-content: flex-start;
- gap:30px;
-    white-space: nowrap;
-    overflow-x: auto;
-        scroll-behavior: smooth;
-  scrollbar-width: none; 
-
+gap:30px;
+white-space: nowrap;
+overflow-x: auto;
+scroll-behavior: smooth;
+scrollbar-width: none; 
+padding:21px 0px;
 }
 
 .tab-buttons-scroll::-webkit-scrollbar {
@@ -498,7 +484,7 @@ justify-content: flex-start;
 .tab-buttons-scroll button {
   background: none;
   border: none;
-  padding:27px 16px 24px 16px;
+  padding:8px 16px;
   font-size: 16px;
   white-space: nowrap;
   cursor: pointer;
@@ -506,10 +492,17 @@ justify-content: flex-start;
   transition: all 0.3s ease;
   color:#3b3a3a;
 }
+.tab-buttons-scroll button:hover {
+ background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    z-index: 1;
+    transition:left 0.3s ease, width 0.3s ease;
+}
 
 .tab-buttons-scroll button.active-tab {
-  border-bottom: 2px solid #000;
   color:#000;
+   
+
 }
 
 
@@ -524,3 +517,16 @@ justify-content: flex-start;
 #test6 .swiper-btn, #test7 .swiper-btn, #test8 .swiper-btn {
   display:none;
 }
+
+.tab-buttons-scroll button.active-tab:after {
+    content: "";
+     border-bottom: 2px solid #000;
+    width: 100%;
+    display: block;
+    bottom:-23px;
+    position: absolute;
+    left: 0px;
+    padding:22px 0px;
+}
+
+  

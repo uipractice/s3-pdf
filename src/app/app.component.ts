@@ -482,7 +482,7 @@ onTabChange(tab: string) {
   ];
 
   secondTabList = [
-    { id: 'test1', label: 'Best practices' },
+    { id: 'test1', label: 'Best Practices' },
     { id: 'test2', label: 'Code Review Handbook' },
     { id: 'test3', label: 'Reusable Components' },
     { id: 'test4', label: 'New Features' },
