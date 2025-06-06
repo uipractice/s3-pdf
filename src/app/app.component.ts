@@ -98,7 +98,7 @@ throw new Error('Method not implemented.');
 
    latestTrends: CarouselItem[] = [
     {
-      title: 'Best Practices for Clean and High-Performance Angular Application',
+      title: 'Best Practices for Clean and High-Performance Angular Applications',
       image: './latest-trends/smashing-magazine.png',
       description: 'Provides tools for consistent branding across UI elements.',
       pdfUrl: 'https://www.smashingmagazine.com/',
@@ -149,7 +149,7 @@ throw new Error('Method not implemented.');
 
   userInterfaceItems: CarouselItem[] = [
     {
-      title: 'Best Practices for Clean and High-Performance Angular Application',
+      title: 'Best Practices for Clean and High-Performance Angular Applications',
       image: './image-place-holder.png',
       description: 'Provides tools for consistent branding across UI elements.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-Angular-Applications-v1.pdf',
@@ -206,7 +206,7 @@ throw new Error('Method not implemented.');
 
   BestPractices: CarouselItem[] = [
     {
-      title: 'Best Practices for Clean and High-Performance Angular Application',
+      title: 'Best Practices for Clean and High-Performance Angular Applications',
       image: './bestpractices/Angular-Best-ractices.png',
       description: 'Provides tools for consistent branding across UI elements.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-Angular-Applications-v1.pdf',
@@ -226,13 +226,13 @@ throw new Error('Method not implemented.');
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-Vue-Applications-v1.pdf',
     },
     {
-      title: 'Best Practices for Clean and High-Performance JavaScript Application',
+      title: 'Best Practices for Clean and High-Performance JavaScript Applications',
       image: './bestpractices/JavaScript-Best-Practices.png',
       description: 'Keeps your designs aligned with the latest UX innovations.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-JavaScript-Applications-v1.pdf',
     },
        {
-      title: 'Best Practices for Building a Clean and High-Performance TypeScript Application',
+      title: 'Building a Clean and High-Performance TypeScript Applications',
       image: './bestpractices/TypeScript-BestPractices.png',
       description: 'Keeps your designs aligned with the latest UX innovations.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Buildinga-Clean-and-High-PerformanceTypeScript-Application-v1.pdf',
@@ -368,12 +368,12 @@ throw new Error('Method not implemented.');
   ];
 
   UnitTestingDocuments: CarouselItem[] = [
-    {
-      title: 'Angular Upgrade Path: Ensuring Smooth Transitions Across Versions',
-      image: './unit-testing/angular-unit-testing.png',
-      description: 'Standardized components for rapid UI development.',
-      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Angular-Upgrade-Path-Ensuring-Smooth-Transitions-Across-Versions-v1.pdf',
-    },
+    // {
+    //   title: 'Angular Unit Testing: A Complete Guide',
+    //   image: './unit-testing/angular-unit-testing.png',
+    //   description: 'Standardized components for rapid UI development.',
+    //   pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Angular-Upgrade-Path-Ensuring-Smooth-Transitions-Across-Versions-v1.pdf',
+    // },
     {
       title: 'React Unit Testing: A Complete Guide',
       image: './unit-testing/react-unit-testing.png',
@@ -382,12 +382,12 @@ throw new Error('Method not implemented.');
     },
   
     
-    {
-      title: 'Code Review Handbook for Vue Developers',
-      image: './unit-testing/vue-unit-testing.png',
-      description: 'Stay ahead with the latest UI design trends.',
-      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-JavaScript-Developers-v1.pdf',
-    },
+    // {
+    //   title: 'Vue Unit Testing: A Complete Guide',
+    //   image: './unit-testing/vue-unit-testing.png',
+    //   description: 'Stay ahead with the latest UI design trends.',
+    //   pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-JavaScript-Developers-v1.pdf',
+    // },
     {
       title: 'JavaScript Unit Testing A Complete Guides',
       image: './unit-testing/node-unit-testing.png',
@@ -396,37 +396,37 @@ throw new Error('Method not implemented.');
     },
   ];
 
-  DesignPatterns: CarouselItem[] = [
-    {
-      title: 'Angular Upgrade Path: Ensuring Smooth Transitions Across Versions',
-      image: './Design-patterns/angular-design.png',
-      description: 'Standardized components for rapid UI development.',
-      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Angular-Upgrade-Path-Ensuring-Smooth-Transitions-Across-Versions-v1.pdf',
-    },
-    {
-      title: 'Code Review Handbook for React Developer',
-      image: './Design-patterns/react-design.png',
-      description: 'Provides tools for consistent branding across UI elements.',
-      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-React-Developers_v1.pdf',
-    },
+  // DesignPatterns: CarouselItem[] = [
+  //   {
+  //     title: 'Angular Upgrade Path: Ensuring Smooth Transitions Across Versions',
+  //     image: './Design-patterns/angular-design.png',
+  //     description: 'Standardized components for rapid UI development.',
+  //     pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Angular-Upgrade-Path-Ensuring-Smooth-Transitions-Across-Versions-v1.pdf',
+  //   },
+  //   {
+  //     title: 'Code Review Handbook for React Developers',
+  //     image: './Design-patterns/react-design.png',
+  //     description: 'Provides tools for consistent branding across UI elements.',
+  //     pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-React-Developers_v1.pdf',
+  //   },
   
-    {
-      title: 'Code Review Handbook for Node Developers',
-      image: './Design-patterns/vue-design.png',
-      description: 'Best practices for creating intuitive user interfaces.',
-      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-Vue-Developers-v1.pdf',
-    },
-    {
-      title: 'Code Review Handbook for Vue Developers',
-      image: './Design-patterns/javascript-design.png',
-      description: 'Stay ahead with the latest UI design trends.',
-      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-JavaScript-Developers-v1.pdf',
-    },
-  ];
+  //   {
+  //     title: 'Code Review Handbook for Node Developers',
+  //     image: './Design-patterns/vue-design.png',
+  //     description: 'Best practices for creating intuitive user interfaces.',
+  //     pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-Vue-Developers-v1.pdf',
+  //   },
+  //   {
+  //     title: 'Code Review Handbook for Vue Developers',
+  //     image: './Design-patterns/javascript-design.png',
+  //     description: 'Stay ahead with the latest UI design trends.',
+  //     pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-JavaScript-Developers-v1.pdf',
+  //   },
+  // ];
 
   SonarQubeconfiguration: CarouselItem[] = [
     {
-      title: 'Sonar Qube Setup and Configuration for Angular Applications',
+      title: 'SonarQube Setup and Configuration for Angular Applications',
       image: './SonarQube/Angular-SonarQube.png',
       description: 'Standardized components for rapid UI development.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/SonarQube-Setup-and-Configuration-for-Angular-Applications.pdf',
@@ -487,11 +487,11 @@ onTabChange(tab: string) {
     { id: 'test3', label: 'Reusable Components' },
     { id: 'test4', label: 'New Features' },
     { id: 'test5', label: 'Version Upgrade' },
-    { id: 'test6', label: 'Design Patterns' },
+    // { id: 'test6', label: 'Design Patterns' },
     { id: 'test7', label: 'Unit Testing' },
     { id: 'test8', label: 'Training Session Recordings' },
     { id: 'test9', label: 'SonarQube configuration' },
-    { id: 'test10', label: 'CI-CD Pipeline' },
+    // { id: 'test10', label: 'CI-CD Pipeline' },
   ];
 
   activeTab1 = '';

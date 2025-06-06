@@ -46,6 +46,7 @@
       <div id="test1" *ngIf="activeTab === 'user-experience'" class="user-experience">
 
 <div class="tabs-sticky" *ngIf="showStickyTabs">
+   <div class="container">
   <div class="tab-buttons-scroll center-tab" #tabScrollContainer1>
  <button class="active-tab"
   *ngFor="let tab of tabList"
@@ -55,10 +56,8 @@
   {{ tab.label }}
 </button>
   </div>
-  <!-- <div class="right-arrow">
-    <button class="scroll-btn" (click)="scrollTabs('left', 'tab1')">&#8249;</button>
-    <button class="scroll-btn" (click)="scrollTabs('right', 'tab1')">&#8250;</button>
-  </div> -->
+  </div>
+
 </div>
 
 
@@ -132,6 +131,7 @@
        <div *ngIf="activeTab === 'user-interface'" class="user-interface">
 
        <div class="tabs-sticky" *ngIf="showStickyTabs">
+         <div class="container">
   <div class="tab-buttons-scroll" #tabScrollContainer2>
  <button
   *ngFor="let tab of secondTabList"
@@ -142,65 +142,65 @@
 </button>
   </div>
   <div class="right-arrow">
-    <button class="scroll-btn" (click)="scrollTabs('left', 'tab2')"><img src="./arrow-left.svg" alt="arrow" width="8px"  title="Arrow left"></button>
-    <button class="scroll-btn rotate-btn" (click)="scrollTabs('right', 'tab2')"><img src="./arrow-left.svg" alt="arrow" width="8px"  title="Arrow right"></button>
+    <button class="scroll-btn left-btn-arrow" (click)="scrollTabs('left', 'tab2')"><img src="./arrow-left.svg" alt="arrow" width="8px"  title="Arrow left"></button>
+    <button class="scroll-btn rotate-btn right-btn-arrow" (click)="scrollTabs('right', 'tab2')"><img src="./arrow-left.svg" alt="arrow" width="8px"  title="Arrow right"></button>
+  </div>
   </div>
 </div>
 
-        <section id="test1"  class="bg-white">
+        <section  class="bg-white">
           <div class="container">
             <div class="tab-content inner-container">
         <div class="carousel-section">
-          <h2 class="heading-split">Best Practices</h2>
-          <app-carousel [items]="BestPractices" [carouselId]="'ui-repository'"></app-carousel>
-          
+          <h2 id="test1"  class="heading-split">Best Practices</h2>
+          <app-carousel [items]="BestPractices" [carouselId]="'ui-repository'"></app-carousel>          
         </div>
       </div>
       </div>
     </section>
-    <section id="test2" class="bg-grey">
+    <section  class="bg-grey">
       <div class="container">
         <div class="tab-content inner-container">
           <div class="carousel-section">
-            <h2 class="heading-split">Code Review Handbook</h2>
+            <h2 id="test2" class="heading-split">Code Review Handbook</h2>
             <app-carousel [items]="CodeReview" [carouselId]="'ui-reposi'"></app-carousel>
           </div>
         </div>
       </div> 
   </section>
-    <section id="test3" class="bg-white">
+    <section  class="bg-white">
       <div class="container">
         <div class="tab-content inner-container">
           <div class="carousel-section">
-            <h2 class="heading-split">Reusable Components</h2>
+            <h2 id="test3" class="heading-split">Reusable Components</h2>
            <app-carousel [items]="ReusableComponents " [carouselId]="'ux-innovations'"></app-carousel>
           </div>
         </div>
       </div> 
   </section>
 
-  <section id="test4" class="bg-grey">
+  <section  class="bg-grey">
     <div class="container">
       <div class="tab-content inner-container">
         <div class="carousel-section">
-          <h2 class="heading-split"> New Features</h2>
+          <h2 id="test4" class="heading-split"> New Features</h2>
           <app-carousel [items]="NewFeatures" [carouselId]="'new-features'"></app-carousel>
         </div>
       </div>
     </div> 
 </section>
-<section id="test5" class="bg-white">
+<section  class="bg-white">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
-        <h2 class="heading-split">Version Upgrade</h2>
+        <h2 id="test5" class="heading-split">Version Upgrade</h2>
         <app-carousel [items]="VersionUpgrade" [carouselId]="'Version-Upgrade'"></app-carousel>
       </div>
     </div>
   </div> 
 </section>
 
-<section id="test6" class="bg-grey">
+<!-- <section id="test6" class="bg-grey">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
@@ -209,42 +209,42 @@
       </div>
     </div>
   </div> 
-</section>
+</section> -->
 
-<section id="test7" class="bg-white">
+<section  class="bg-grey">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
-        <h2 class="heading-split">Unit Testing</h2>
+        <h2 id="test7" class="heading-split">Unit Testing</h2>
         <app-carousel [items]="UnitTestingDocuments" [carouselId]="'UnitTestin'"></app-carousel>
       </div>
     </div>
   </div> 
 </section>
 
-<section id="test8" class="bg-grey">
+<section  class="bg-white">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
-        <h2 class="heading-split">Training Session Recordings</h2>
+        <h2 id="test8" class="heading-split">Training Session Recordings</h2>
         <app-carousel [items]="TrainingSession" [carouselId]="'Training-Session'"></app-carousel>
       </div>
     </div>
   </div> 
 </section>
 
-<section id="test9" class="bg-white">
+<section class="bg-grey">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
-        <h2 class="heading-split">SonarQube configuration</h2>
+        <h2  id="test9" class="heading-split">SonarQube configuration</h2>
         <app-carousel [items]="SonarQubeconfiguration" [carouselId]="'SonarQube'"></app-carousel>
       </div>
     </div>
   </div> 
 </section>
 
-<section id="test10" class="bg-grey">
+<!-- <section id="test10" class="bg-grey">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
@@ -253,7 +253,7 @@
       </div>
     </div>
   </div> 
-</section>
+</section> -->
 
 
 
