@@ -542,15 +542,22 @@ margin-bottom: -2px;
     left: 0px;
     padding:22px 0px;
 }
-
+.tab-buttons-scroll button:hover:after {
+  content:'';
+     border-bottom: 2px solid #000;
+    width: 100%;
+    display: block;
+    bottom:-17px;
+    position: absolute;
+    left: 0px;
+    padding:22px 0px;
+}
 .lft-btn-arrow {
   position: absolute;
   left:0px;
 
 }
-
-
-@media (min-width:481px){
-.mobile-logo-top {border:2px solid green;
+.hide-arrow .swiper-btn {
+  display:none;
 }
-}
+

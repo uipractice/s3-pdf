@@ -266,7 +266,7 @@ throw new Error('Method not implemented.');
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-Angular-Developers.pdf',
     },
     {
-      title: 'Code Review Handbook for React Developer',
+      title: 'Code Review Handbook for React Developers',
       image: './codeReviewFiles/React-Code-Review.png',
       description: 'Provides tools for consistent branding across UI elements.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-React-Developers.pdf',
@@ -389,7 +389,7 @@ throw new Error('Method not implemented.');
     //   pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-JavaScript-Developers-v1.pdf',
     // },
     {
-      title: 'JavaScript Unit Testing A Complete Guides',
+      title: 'JavaScript Unit Testing A Complete Guide',
       image: './unit-testing/node-unit-testing.png',
       description: 'Best practices for creating intuitive user interfaces.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/JavaScript-Unit-Testing-A-Complete-Guide-v1.pdf',
