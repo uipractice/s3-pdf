@@ -132,7 +132,7 @@
 
        <div class="tabs-sticky" *ngIf="showStickyTabs">
          <div class="container">
-  <div class="tab-buttons-scroll" #tabScrollContainer2>
+  <div class="tab-buttons-scroll" #tabScrollContainer2 (scroll)="updateScrollButtons('tab2')">
  <button
   *ngFor="let tab of secondTabList"
   (click)="onStickyTabClick(tab.id, 'tab2')"
@@ -142,8 +142,8 @@
 </button>
   </div>
   <div class="right-arrow">
-    <button class="scroll-btn left-btn-arrow" (click)="scrollTabs('left', 'tab2')"><img src="./arrow-left.svg" alt="arrow" width="8px"  title="Arrow left"></button>
-    <button class="scroll-btn rotate-btn right-btn-arrow" (click)="scrollTabs('right', 'tab2')"><img src="./arrow-left.svg" alt="arrow" width="8px"  title="Arrow right"></button>
+    <button  [disabled]="leftDisabledTab1" class="scroll-btn left-btn-arrow" (click)="scrollTabs('left', 'tab2')"><img src="./arrow-left.svg" alt="arrow" width="8px"  title="Arrow left"></button>
+    <button [disabled]="rightDisabledTab1" class="scroll-btn rotate-btn right-btn-arrow" (click)="scrollTabs('right', 'tab2')"><img src="./arrow-left.svg" alt="arrow" width="8px"  title="Arrow right"></button>
   </div>
   </div>
 </div>

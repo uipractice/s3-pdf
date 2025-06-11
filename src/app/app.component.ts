@@ -520,15 +520,57 @@ onTabChange(tab: string) {
   }
 }
 
-  scrollTabs(direction: 'left' | 'right', group: 'tab1' | 'tab2'): void {
-    const scrollContainer = group === 'tab1' 
-      ? this.tabScrollContainer1.nativeElement 
+  // scrollTabs(direction: 'left' | 'right', group: 'tab1' | 'tab2'): void {
+  //   const scrollContainer = group === 'tab1' 
+  //     ? this.tabScrollContainer1.nativeElement 
+  //     : this.tabScrollContainer2.nativeElement;
+
+  //   const scrollAmount = 150;
+  //   scrollContainer.scrollBy({
+  //     left: direction === 'left' ? -scrollAmount : scrollAmount,
+  //     behavior: 'smooth',
+  //   });
+  // }
+
+  leftDisabledTab1 = true;
+rightDisabledTab1 = false;
+
+leftDisabledTab2 = true;
+rightDisabledTab2 = false;
+
+scrollTabs(direction: 'left' | 'right', group: 'tab1' | 'tab2'): void {
+  const scrollContainer = group === 'tab1' 
+    ? this.tabScrollContainer1.nativeElement 
+    : this.tabScrollContainer2.nativeElement;
+
+  const scrollAmount = 150;
+  const delta = direction === 'left' ? -scrollAmount : scrollAmount;
+
+  scrollContainer.scrollBy({
+    left: delta,
+    behavior: 'smooth',
+  });
+
+  // Wait for scroll to complete then update button state
+  setTimeout(() => this.updateScrollButtons(group), 300);
+}
+updateScrollButtons(group: 'tab1' | 'tab2'): void {
+    const scrollContainer = group === 'tab1'
+      ? this.tabScrollContainer1.nativeElement
       : this.tabScrollContainer2.nativeElement;
 
-    const scrollAmount = 150;
-    scrollContainer.scrollBy({
-      left: direction === 'left' ? -scrollAmount : scrollAmount,
-      behavior: 'smooth',
-    });
+    const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+    const currentScrollLeft = scrollContainer.scrollLeft;
+
+    const isAtStart = currentScrollLeft <= 0;
+    const isAtEnd = currentScrollLeft >= maxScrollLeft - 1;
+
+    if (group === 'tab1') {
+      this.leftDisabledTab1 = isAtStart;
+      this.rightDisabledTab1 = isAtEnd;
+    } else {
+      this.leftDisabledTab2 = isAtStart;
+      this.rightDisabledTab2 = isAtEnd;
+    }
   }
 }
