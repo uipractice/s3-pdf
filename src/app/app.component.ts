@@ -98,49 +98,49 @@ throw new Error('Method not implemented.');
 
    latestTrends: CarouselItem[] = [
     {
-      title: 'Best Practices for Clean and High-Performance Angular Applications',
+      title: 'Smashing Magazine - For Designers And Developers',
       image: './latest-trends/smashing-magazine.png',
       description: 'Provides tools for consistent branding across UI elements.',
       pdfUrl: 'https://www.smashingmagazine.com/',
     },
     {
-      title: 'Getting the Most Out of React 19: New Features and Best Practices',
+      title: 'Nielsen Norman Group (NNg) UX Podcast',
       image: './latest-trends/nng.png',
       description: 'Standardized components for rapid UI development.',
       pdfUrl: 'https://www.nngroup.com/',
     },
     {
-      title: 'UI Guidelines and Best Practices',
+      title: 'UX Design - Definition & Guide',
       image: './latest-trends/ux-design.png',
       description: 'Best practices for creating intuitive user interfaces.',
       pdfUrl: 'https://uxdesign.cc/',
     },
     {
-      title: 'Updated evolving UI trends',
+      title: 'Awwwards - Best Web Design Trends',
       image: './latest-trends/awwwards.png',
       description: 'Stay ahead with the latest UI design trends.',
       pdfUrl: 'https://www.awwwards.com/',
     },
      {
-      title: 'Updated evolving UI trends',
+      title: 'Muzli - Design inspiration hub',
       image: './latest-trends/muzil.png',
       description: 'Stay ahead with the latest UI design trends.',
       pdfUrl: 'https://muz.li/',
     },
      {
-      title: 'Updated evolving UI trends',
+      title: 'Adobe XD Design Tool: A Brief Overview',
       image: './latest-trends/adobe-xd-Ideas.png',
       description: 'Stay ahead with the latest UI design trends.',
       pdfUrl: 'https://xd.adobe.com/ideas/',
     },
      {
-      title: 'Updated evolving UI trends',
+      title: 'UX Planet - One stop resource for everything r...',
       image: './latest-trends/ux-planet.png',
       description: 'Stay ahead with the latest UI design trends.',
       pdfUrl: 'https://uxplanet.org/',
     },
       {
-      title: 'Updated evolving UI trends',
+      title: 'How to Get Featured on Behance: Insights and Tips',
       image: './latest-trends/behance.png',
       description: 'Stay ahead with the latest UI design trends.',
       pdfUrl: 'https://www.behance.net/',
@@ -149,26 +149,32 @@ throw new Error('Method not implemented.');
 
   userInterfaceItems: CarouselItem[] = [
     {
-      title: 'Best Practices for Clean and High-Performance Angular Applications',
-      image: './image-place-holder.png',
+      title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      image: './uxresources/design-systems.png',
       description: 'Provides tools for consistent branding across UI elements.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-Angular-Applications-v1.pdf',
     },
     {
-      title: 'Getting the Most Out of React 19: New Features and Best Practices',
-      image: './image-place-holder.png',
+      title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+      image: './uxresources/Mobbin.png',
       description: 'Standardized components for rapid UI development.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Getting-the-Most-Out-of-React-19-New-Features-and-Best-Practices-v1.pdf',
     },
     {
-      title: 'UI Guidelines and Best Practices',
-      image: './image-place-holder.png',
+      title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+      image:'./uxresources/drillle.png',
       description: 'Best practices for creating intuitive user interfaces.',
       pdfUrl: 'https://dashboard-ui-ux-pdfs.s3.ap-south-1.amazonaws.com/test1.pdf',
     },
     {
-      title: 'Updated evolving UI trends',
-      image: './image-place-holder.png',
+      title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+      image: './uxresources/freepik.png',
+      description: 'Stay ahead with the latest UI design trends.',
+      pdfUrl: 'https://dashboard-ui-ux-pdfs.s3.ap-south-1.amazonaws.com/test1.pdf',
+    },
+      {
+      title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      image: './uxresources/flaticon.png',
       description: 'Stay ahead with the latest UI design trends.',
       pdfUrl: 'https://dashboard-ui-ux-pdfs.s3.ap-south-1.amazonaws.com/test1.pdf',
     },
@@ -178,26 +184,26 @@ throw new Error('Method not implemented.');
 
   BrandDesignHub: CarouselItem[] = [
     {
-      title: 'Why Style Guides Matter: Clarity, Consistency, Communication',
-      image: './image-place-holder.png',
+      title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+      image: './branddesignhub/brand-guidelines.png',
       description: 'Provides tools for consistent branding across UI elements.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UX/Evoke-Brand-Guidelines.pdf',
     },
     {
-      title: 'Evoke Design System Empowering Iterative Collaboration',
-      image: './image-place-holder.png',
+      title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+      image: './branddesignhub/design-system.png',
       description: 'Standardized components for rapid UI development.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UX/Evoke-Design-System.pdf',
     },
     {
-      title: 'Tools to Conduct Surveys-Like Customer, User',
-      image: './image-place-holder.png',
+      title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+      image: './branddesignhub/freepik.png',
       description: 'Best practices for creating intuitive user interfaces.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UX/UX-Tools.pdf',
     },
     {
-      title: 'Updated evolving UI trends',
-      image: './image-place-holder.png',
+      title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+      image: './branddesignhub/ux-resources.png',
       description: 'Stay ahead with the latest UI design trends.',
       pdfUrl: 'https://dashboard-ui-ux-pdfs.s3.ap-south-1.amazonaws.com/test1.pdf',
     },
@@ -314,10 +320,38 @@ throw new Error('Method not implemented.');
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-JavaScript-Developers-v1.pdf',
     },
   ];
+UXPerformanceLog: CarouselItem[] = [
+    {
+      title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      image: './UxPerformanceLog/case-study.png',
+      description: 'Standardized components for rapid UI development.',
+      pdfUrl: '',
+      requiresAccess: true,
+      mailtoLink: 'mailto:uiuxpractice@evoketechnologies.com?subject=Request Access - Angular',
+     },
+    {
+      title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      image: './UxPerformanceLog/design-review.png',
+      description: 'Provides tools for consistent branding across UI elements.',
+      pdfUrl: '',
+     requiresAccess: true,      
+      mailtoLink: 'mailto:uiuxpractice@evoketechnologies.com?subject=Request Access - React',
+
+    },
+    {
+      title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      image: './UxPerformanceLog/feedback.png',
+      description: 'Stay ahead with the latest UI design trends.',
+      pdfUrl: '',
+      requiresAccess: true,       
+          mailtoLink: 'mailto:uiuxpractice@evoketechnologies.com?subject=Request Access - Vue',
+     
+    }
+  ];
 
   TrainingSession: CarouselItem[] = [
     {
-      title: 'If you need access to the training session recordings, please contact us.',
+      title: 'Kindly Provide Access to Angular Training Recordings',
       image: './training-session/angular-training.png',
       description: 'Standardized components for rapid UI development.',
       pdfUrl: '',
@@ -325,7 +359,7 @@ throw new Error('Method not implemented.');
       mailtoLink: 'mailto:uiuxpractice@evoketechnologies.com?subject=Request Access - Angular',
      },
     {
-      title: 'If you need access to the training session recordings, please contact us.',
+      title: 'Kindly Provide Access to React Training Recordings',
       image: './training-session/react-training.png',
       description: 'Provides tools for consistent branding across UI elements.',
       pdfUrl: '',
@@ -333,10 +367,8 @@ throw new Error('Method not implemented.');
       mailtoLink: 'mailto:uiuxpractice@evoketechnologies.com?subject=Request Access - React',
 
     },
-  
-   
     {
-      title: 'If you need access to the training session recordings, please contact us.',
+      title: 'Kindly Provide Access to Vue Training Recordings.',
       image: './training-session/vue-training.png',
       description: 'Stay ahead with the latest UI design trends.',
       pdfUrl: '',
@@ -345,14 +377,12 @@ throw new Error('Method not implemented.');
      
     },
      {
-      title: 'If you need access to the training session recordings, please contact us.',
+      title: 'Kindly Provide Access to NodeJs Training Recordings',
       image: './training-session/node-training.png',
       description: 'Best practices for creating intuitive user interfaces.',
       pdfUrl: '',
      requiresAccess: true,      
     mailtoLink: 'mailto:uiuxpractice@evoketechnologies.com?subject=Request Access - NodeJs',
-
-      
     }
   ];
 
@@ -368,14 +398,14 @@ throw new Error('Method not implemented.');
   ];
 
   UnitTestingDocuments: CarouselItem[] = [
-    // {
-    //   title: 'Angular Unit Testing: A Complete Guide',
-    //   image: './unit-testing/angular-unit-testing.png',
-    //   description: 'Standardized components for rapid UI development.',
-    //   pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Angular-Upgrade-Path-Ensuring-Smooth-Transitions-Across-Versions-v1.pdf',
-    // },
     {
-      title: 'React Unit Testing: A Complete Guide',
+      title: 'Angular Unit Testing A Complete Guide',
+      image: './unit-testing/angular-unit-testing.png',
+      description: 'Standardized components for rapid UI development.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Angular-Unit-Testing-A-Complete-Guide-v1.pdf',
+    },
+    {
+      title: 'React Unit Testing A Complete Guide',
       image: './unit-testing/react-unit-testing.png',
       description: 'Provides tools for consistent branding across UI elements.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/React-Unit-Testing-A-Complete-Guide-v1.pdf',
@@ -476,9 +506,9 @@ onTabChange(tab: string) {
     { id: 'latest-trends', label: 'Latest Trends' },
     { id: 'ux-resources', label: 'UX Resources' },
     { id: 'brand-design-hub', label: 'Brand & Design Hub' },
-    { id: 'ux-performance-log', label: 'UX Performance Log' },
-    { id: 'ux-documents', label: 'UX Documents' },
-    { id: 'monthly-ux-meetings', label: 'Monthly UX Meetings' },
+     { id: 'ux-performance-log', label: 'UX Performance Log' },
+    // { id: 'ux-documents', label: 'UX Documents' },
+    // { id: 'monthly-ux-meetings', label: 'Monthly UX Meetings' },
   ];
 
   secondTabList = [
@@ -490,7 +520,7 @@ onTabChange(tab: string) {
     // { id: 'test6', label: 'Design Patterns' },
     { id: 'test7', label: 'Unit Testing' },
     { id: 'test8', label: 'Training Session Recordings' },
-    { id: 'test9', label: 'SonarQube configuration' },
+    { id: 'test9', label: 'SonarQube Configuration' },
     // { id: 'test10', label: 'CI-CD Pipeline' },
   ];
 

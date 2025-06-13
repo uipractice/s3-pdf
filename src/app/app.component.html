@@ -61,54 +61,54 @@
 </div>
 
 
-        <section id="latest-trends" class="latest-trends bg-white">
+        <section  class="latest-trends bg-white">
           <div class="container">
             <div class="tab-content inner-container">
         <div class="carousel-section">
-          <h2 class="heading-split"> Latest Trends</h2>
-          <app-carousel [items]="latestTrends" [carouselId]="'latest-trends'"></app-carousel>
+          <h2 id="latest-trends" class="heading-split"> Latest Trends</h2>
+          <app-carousel [items]="latestTrends" [carouselId]="'latest-trend'"></app-carousel>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="ux-resources" class="bg-grey ">
+  <section  class="bg-grey ">
     <div class="container">
       <div class="tab-content inner-container">
         <div class="carousel-section">
-          <h2 class="heading-split">UX Resources</h2>
-          <app-carousel [items]="userInterfaceItems" [carouselId]="'ui-repository'"></app-carousel>
+          <h2 id="ux-resources" class="heading-split">UX Resources</h2>
+          <app-carousel [items]="userInterfaceItems" [carouselId]="'ux-resource'"></app-carousel>
         </div>
       </div>
     </div> 
 </section>
-<section id="brand-design-hub" class="bg-white">
+<section  class="bg-white hide-arrow">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
-        <h2 class="heading-split">Brand & Design Hub</h2>
-        <app-carousel [items]="BrandDesignHub" [carouselId]="'BrandDesign-Hub'"></app-carousel>
+        <h2 id="brand-design-hub" class="heading-split">Brand & Design Hub</h2>
+        <app-carousel [items]="BrandDesignHub" [carouselId]="'design-hub'"></app-carousel>
       </div>
     </div>
   </div> 
 </section>
 
-<section id="ux-performance-log" class="bg-grey">
+<section  class="bg-grey">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
-        <h2 class="heading-split">UX Performance Log</h2>
-        <app-carousel [items]="userInterfaceItems" [carouselId]="'ui-repository'"></app-carousel>
+        <h2 id="ux-performance-log" class="heading-split">UX Performance Log</h2>
+        <app-carousel [items]="UXPerformanceLog" [carouselId]="'UX-Performance'"></app-carousel>
       </div>
     </div>
   </div> 
 </section>
-<section id="ux-documents" class="bg-white">
+<!-- <section id="ux-documents" class="bg-white">
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
         <h2 class="heading-split">UX Documents</h2>
-        <app-carousel [items]="userInterfaceItems" [carouselId]="'ui-repository'"></app-carousel>
+        <app-carousel [items]="userInterfaceItems2" [carouselId]="'ui-repository'"></app-carousel>
       </div>
     </div>
   </div> 
@@ -120,11 +120,11 @@
     <div class="tab-content inner-container">
       <div class="carousel-section">
         <h2 class="heading-split">Monthly UX Meetings</h2>
-        <app-carousel [items]="userInterfaceItems" [carouselId]="'ui-repository'"></app-carousel>
+        <app-carousel [items]="userInterfaceItems3" [carouselId]="'ui-repository'"></app-carousel>
       </div>
     </div>
   </div> 
-</section>
+</section> -->
   </div>
 <!--User Interface-->
 
@@ -237,7 +237,7 @@
   <div class="container">
     <div class="tab-content inner-container">
       <div class="carousel-section">
-        <h2  id="test9" class="heading-split">SonarQube configuration</h2>
+        <h2  id="test9" class="heading-split">SonarQube Configuration</h2>
         <app-carousel [items]="SonarQubeconfiguration" [carouselId]="'SonarQube'"></app-carousel>
       </div>
     </div>
@@ -268,7 +268,7 @@
       <img src="./arrow-up.svg" alt="arrow up" title="arrow" />
     </p> -->
 
-   <p> Copyright © Evoke Technologies | <a href="www.evoketechnologies.com">www.evoketechnologies.com    </a> </p>
+   <p> Copyright © Evoke Technologies | <a target="_blank" href="https://www.evoketechnologies.com/">www.evoketechnologies.com    </a> </p>
 
    <p>  For any inquiries, please contact us at <a href="mailto:uiuxpractice@evoketechnologies.com">uiuxpractice&#64;evoketechnologies.com    </a></p>
   </div>

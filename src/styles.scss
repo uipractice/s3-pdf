@@ -478,7 +478,8 @@ display: inline-block;
 min-width: 100%;
 display: flex;
 justify-content: flex-start;
-gap:40px;
+gap: 25px;
+// gap:40px;
 white-space: nowrap;
 overflow-x: auto;
 scroll-behavior: smooth;
@@ -495,7 +496,7 @@ margin-bottom: -2px;
   background: none;
   border: none;
   padding:8px 0px;
-  font-size:14px;
+  font-size:15px;
   white-space: nowrap;
   cursor: pointer;
   border-bottom: 2px solid transparent;
@@ -563,4 +564,11 @@ margin-bottom: -2px;
 
 button:disabled {
   cursor: not-allowed;
+}
+
+@media (min-width:1200px) {
+.right-arrow {
+  display: none;
+}
+
 }
