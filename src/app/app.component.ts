@@ -149,34 +149,34 @@ throw new Error('Method not implemented.');
 
   userInterfaceItems: CarouselItem[] = [
     {
-      title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      title: 'Central hub for Evoke’s consistent UI/UX patterns.',
       image: './uxresources/design-systems.png',
       description: 'Provides tools for consistent branding across UI elements.',
-      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-Angular-Applications-v1.pdf',
+      pdfUrl: 'https://designsystemsrepo.com/',
     },
     {
-      title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+      title: 'Get inspired by real world UI from leading apps. ',
       image: './uxresources/Mobbin.png',
       description: 'Standardized components for rapid UI development.',
-      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Getting-the-Most-Out-of-React-19-New-Features-and-Best-Practices-v1.pdf',
+      pdfUrl: 'https://mobbin.com/browse/ios/apps',
     },
     {
-      title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+      title: 'Explore work from the most talented designers.',
       image:'./uxresources/drillle.png',
       description: 'Best practices for creating intuitive user interfaces.',
-      pdfUrl: 'https://dashboard-ui-ux-pdfs.s3.ap-south-1.amazonaws.com/test1.pdf',
+      pdfUrl: 'https://dribbble.com/',
     },
     {
-      title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+      title: 'Find & Download Free Graphic Resources. ',
       image: './uxresources/freepik.png',
       description: 'Stay ahead with the latest UI design trends.',
-      pdfUrl: 'https://dashboard-ui-ux-pdfs.s3.ap-south-1.amazonaws.com/test1.pdf',
+      pdfUrl: 'https://www.freepik.com/',
     },
       {
-      title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      title: 'Download Free Icons and Stickers for your projects. ',
       image: './uxresources/flaticon.png',
       description: 'Stay ahead with the latest UI design trends.',
-      pdfUrl: 'https://dashboard-ui-ux-pdfs.s3.ap-south-1.amazonaws.com/test1.pdf',
+      pdfUrl: 'https://www.flaticon.com/',
     },
   ];
 
@@ -184,28 +184,22 @@ throw new Error('Method not implemented.');
 
   BrandDesignHub: CarouselItem[] = [
     {
-      title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+      title: 'Maintain consistency across all platforms. ',
       image: './branddesignhub/brand-guidelines.png',
       description: 'Provides tools for consistent branding across UI elements.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UX/Evoke-Brand-Guidelines.pdf',
     },
     {
-      title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+      title: 'Unified design, faster workflows at scale. ',
       image: './branddesignhub/design-system.png',
       description: 'Standardized components for rapid UI development.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UX/Evoke-Design-System.pdf',
     },
-    {
-      title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
-      image: './branddesignhub/freepik.png',
-      description: 'Best practices for creating intuitive user interfaces.',
-      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UX/UX-Tools.pdf',
-    },
-    {
-      title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+      {
+      title: 'Focused on user needs and usability. ',
       image: './branddesignhub/ux-resources.png',
       description: 'Stay ahead with the latest UI design trends.',
-      pdfUrl: 'https://dashboard-ui-ux-pdfs.s3.ap-south-1.amazonaws.com/test1.pdf',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UX/UX-Tools.pdf',
     },
   ];
 
@@ -506,7 +500,7 @@ onTabChange(tab: string) {
     { id: 'latest-trends', label: 'Latest Trends' },
     { id: 'ux-resources', label: 'UX Resources' },
     { id: 'brand-design-hub', label: 'Brand & Design Hub' },
-     { id: 'ux-performance-log', label: 'UX Performance Log' },
+    //  { id: 'ux-performance-log', label: 'UX Performance Log' },
     // { id: 'ux-documents', label: 'UX Documents' },
     // { id: 'monthly-ux-meetings', label: 'Monthly UX Meetings' },
   ];
