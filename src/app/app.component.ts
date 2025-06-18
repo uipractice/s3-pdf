@@ -149,7 +149,7 @@ throw new Error('Method not implemented.');
 
   userInterfaceItems: CarouselItem[] = [
     {
-      title: 'Library of shared design elements and rules',
+      title: 'Library of shared design elements and rules.',
       image: './uxresources/design-systems.png',
       description: 'Provides tools for consistent branding across UI elements.',
       pdfUrl: 'https://designsystemsrepo.com/',
