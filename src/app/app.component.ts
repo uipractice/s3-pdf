@@ -149,19 +149,19 @@ throw new Error('Method not implemented.');
 
   userInterfaceItems: CarouselItem[] = [
     {
-      title: 'Central hub for Evoke’s consistent UI/UX patterns.',
+      title: 'Library of shared design elements and rules',
       image: './uxresources/design-systems.png',
       description: 'Provides tools for consistent branding across UI elements.',
       pdfUrl: 'https://designsystemsrepo.com/',
     },
     {
-      title: 'Get inspired by real world UI from leading apps. ',
+      title: 'Get Inspired by Real World UI from Leading Apps. ',
       image: './uxresources/Mobbin.png',
       description: 'Standardized components for rapid UI development.',
       pdfUrl: 'https://mobbin.com/browse/ios/apps',
     },
     {
-      title: 'Explore work from the most talented designers.',
+      title: 'Explore Work from the Most Talented Designers.',
       image:'./uxresources/drillle.png',
       description: 'Best practices for creating intuitive user interfaces.',
       pdfUrl: 'https://dribbble.com/',
@@ -173,30 +173,28 @@ throw new Error('Method not implemented.');
       pdfUrl: 'https://www.freepik.com/',
     },
       {
-      title: 'Download Free Icons and Stickers for your projects. ',
+      title: 'Download Free Icons and Stickers for your Projects. ',
       image: './uxresources/flaticon.png',
       description: 'Stay ahead with the latest UI design trends.',
       pdfUrl: 'https://www.flaticon.com/',
     },
   ];
 
-
-
   BrandDesignHub: CarouselItem[] = [
     {
-      title: 'Maintain consistency across all platforms. ',
+      title: 'Setting the standard for how our brand shows up.',
       image: './branddesignhub/brand-guidelines.png',
       description: 'Provides tools for consistent branding across UI elements.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UX/Evoke-Brand-Guidelines.pdf',
     },
     {
-      title: 'Unified design, faster workflows at scale. ',
+      title: 'One consistent system to simplify product design.',
       image: './branddesignhub/design-system.png',
       description: 'Standardized components for rapid UI development.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UX/Evoke-Design-System.pdf',
     },
       {
-      title: 'Focused on user needs and usability. ',
+      title: 'Using right tools at each stage of design process.',
       image: './branddesignhub/ux-resources.png',
       description: 'Stay ahead with the latest UI design trends.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UX/UX-Tools.pdf',
@@ -406,12 +404,12 @@ UXPerformanceLog: CarouselItem[] = [
     },
   
     
-    // {
-    //   title: 'Vue Unit Testing: A Complete Guide',
-    //   image: './unit-testing/vue-unit-testing.png',
-    //   description: 'Stay ahead with the latest UI design trends.',
-    //   pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Code-Review-Handbook-for-JavaScript-Developers-v1.pdf',
-    // },
+    {
+      title: 'Vue Unit Testing A Complete Guide',
+      image: './unit-testing/vue-unit-testing.png',
+      description: 'Stay ahead with the latest UI design trends.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Vue-Unit-Testing-A-Complete-Guide-v1.pdf',
+    },
     {
       title: 'JavaScript Unit Testing A Complete Guide',
       image: './unit-testing/node-unit-testing.png',
@@ -490,6 +488,12 @@ UXPerformanceLog: CarouselItem[] = [
 onTabChange(tab: string) {
   console.log('Switching to tab:', tab);
   this.activeTab = tab;
+     if (tab === 'user-interface') {
+    this.activeTab1 = ''; 
+  } else if (tab === 'user-experience') {
+    this.activeTab2 = '';
+  }
+  
 }
 
 
@@ -539,9 +543,13 @@ onTabChange(tab: string) {
 
   if (tabGroup === 'tab1') {
     this.activeTab1 = tabId;
+    this.activeTab2 = '';
   } else {
     this.activeTab2 = tabId;
+    this.activeTab1 = '';
   }
+
+  
 }
 
   // scrollTabs(direction: 'left' | 'right', group: 'tab1' | 'tab2'): void {
