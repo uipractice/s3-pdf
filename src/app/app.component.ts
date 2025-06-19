@@ -131,7 +131,7 @@ throw new Error('Method not implemented.');
       title: 'Adobe XD Design Tool: A Brief Overview',
       image: './latest-trends/adobe-xd-Ideas.png',
       description: 'Stay ahead with the latest UI design trends.',
-      pdfUrl: 'https://xd.adobe.com/ideas/',
+      pdfUrl: 'https://adobexdplatform.com/',
     },
      {
       title: 'UX Planet - One stop resource for everything r...',
