@@ -58,31 +58,135 @@ font-family: "Urbanist", sans-serif;
   height: 40px;
 }
 
+// .tabs {
+//   position: relative;
+//   display: flex;
+//   gap: 12px;
+//   background: transparent;
+//   padding: 4px;
+//   border-radius: 50px;
+// }
+
+// .tabs button {
+//   position: relative;
+//   background: none;
+//   border: none;
+//   padding: 8px 20px;
+//   font-size: 16px;
+//   font-weight: 500;
+//   color: #fff;
+//   cursor: pointer;
+//   z-index: 1;
+//   transition: color 0.3s;
+// }
+
+// .tabs button.active {
+//   // color: #000;
+//   color:#000;
+// }
+
+// .tab-indicator {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   height: 100%;
+//   border-radius: 40px;
+//   background: #fff;
+//   transition: left 0.3s ease, width 0.3s ease;
+//   z-index: 0;
+//   width:160px;
+// }
+
+
+// .tabs {
+//   display: flex;
+//   gap: 20px;
+// }
+// .tabs button {
+//   position: relative;
+//   overflow: hidden;
+// }
+
+// .tabs button::before {
+//   content: "";
+//   position: absolute;
+//   inset: 0;
+//   background: #fff;
+//   border-radius: 40px;
+//   transform: scaleX(0);
+//   transform-origin: left;
+//   transition: transform 0.3s ease;
+//   z-index: 0;
+// }
+
+// .tabs button.active::before {
+//   transform: scaleX(1);
+// }
+
+// .tabs button span {
+//   position: relative;
+//   z-index: 1;
+//   color: inherit;
+// }
+
+// .tabs button {
+//   padding: 10px 20px;
+//   font-size: 16px;
+//   background: none;
+//   border: none;
+//   cursor: pointer;
+//   transition: color 0.3s;
+//   color: #FFF;
+// font-weight: 500;
+// line-height: 32px; 
+// letter-spacing: 0.32px;
+// padding: 4px 16px;
+// gap: 2px;
+// }
+
+// .tabs button.active {
+//   border-radius: 40px;
+//   background: #FFF;
+// color:#000;
+// }
+
 .tabs {
+  position:relative !important;
   display: flex;
-  gap: 20px;
+  padding: 4px;
 }
 
 .tabs button {
-  padding: 10px 20px;
-  font-size: 16px;
   background: none;
   border: none;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: 500;
   cursor: pointer;
+  z-index: 1;
   transition: color 0.3s;
-  color: #FFF;
-font-weight: 500;
-line-height: 32px; 
-letter-spacing: 0.32px;
-padding: 4px 16px;
-gap: 2px;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.32px;
 }
 
 .tabs button.active {
-  border-radius: 40px;
-  background: #FFF;
-color:#000;
+  color: #000;
 }
+
+.tab-indicator {
+   position: absolute;
+  top: 0;
+  height: 100%;
+  background: #fff;
+  border-radius: 40px;
+  z-index: 0;
+  transition: left 0.3s ease, width 0.3s ease;
+  will-change: left, width;
+}
+
 
 .tabs button.signup {
   background-color: #007bff;
@@ -313,15 +417,25 @@ display:none;
         padding-bottom:2px;
         line-height: 32px;
         letter-spacing: 0.64px;
+        position: relative;
+        transition:color 0.3s ease-in-out;
 span{
   font-size:22px;
   color:#181818;
 }
   }
-  
+.view-details:hover {
+  color:#0047B3;
+}
   .view-details span {
     margin-left: 5px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
   }
+  .view-details:hover span {
+    // transform: translateX(8px) rotate(-45deg);
+    transform: translateX(10px);
+}
   
   .swiper-button-prev,
   .swiper-button-next {
@@ -480,7 +594,7 @@ display: inline-block;
 min-width: 100%;
 display: flex;
 justify-content: flex-start;
-gap: 25px;
+gap:30px;
 // gap:40px;
 white-space: nowrap;
 overflow-x: auto;
@@ -506,7 +620,7 @@ margin-bottom: -2px;
   color:#3b3a3a;
   opacity: 0.7;
   font-family: "Urbanist", sans-serif;  
-  letter-spacing: 0.7px;
+  letter-spacing: 0.4px;
   font-weight: 500; 
 // &::before {
 //   height: 18px;

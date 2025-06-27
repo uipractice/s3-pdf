@@ -5,21 +5,22 @@
         <div class="logo">
           <img src="./logo-1x.svg" alt="Evoke Technologies" />
         </div>
-        <nav class="tabs">
+        <nav class="tabs" #mainTabContainer>
           <button
             [class.active]="activeTab === 'user-experience'"
-            (click)="onTabChange('user-experience')"
+            (click)="onTabChange('user-experience', $event)"
             aria-label="User Experience Tab"
           >
-            User Experience
+          User Experience
           </button>
           <button
             [class.active]="activeTab === 'user-interface'"
-            (click)="onTabChange('user-interface')"
+            (click)="onTabChange('user-interface', $event)"
             aria-label="User Interface Tab"
           >
             User Interface
           </button>
+          <div class="tab-indicator" [ngStyle]="mainIndicatorStyle"></div>
         </nav>
         <div class="right-sign-up">
           <!-- <a class="search">

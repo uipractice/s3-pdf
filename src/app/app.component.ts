@@ -27,6 +27,7 @@ scrollToSection(arg0: string) {
 throw new Error('Method not implemented.');
 }
   activeTab: string = 'user-experience';
+
   userExperienceItems: CarouselItem[] = [
     {
       title: 'Design System: A Unified Approach to UI/UX',
@@ -483,11 +484,23 @@ UXPerformanceLog: CarouselItem[] = [
    
   ];
 
-   
 
-onTabChange(tab: string) {
-  console.log('Switching to tab:', tab);
+  @ViewChild('mainTabContainer', { static: false }) mainTabContainer!: ElementRef;
+
+   mainIndicatorStyle: any = {};
+
+
+onTabChange(tab: string, event?: MouseEvent) {
+  //console.log('Switching to tab:', tab);
   this.activeTab = tab;
+
+  if (event) {
+    const el = event.currentTarget as HTMLElement;
+    this.mainIndicatorStyle = {
+      width: `${el.offsetWidth}px`,
+      left: `${el.offsetLeft}px`
+    };
+  }
      if (tab === 'user-interface') {
     this.activeTab1 = ''; 
   } else if (tab === 'user-experience') {
@@ -495,7 +508,21 @@ onTabChange(tab: string) {
   }
   
 }
+ngAfterViewInit() {
+  // Make sure the background starts in the right place
+  setTimeout(() => this.updateMainIndicator(), 0);
+}
 
+updateMainIndicator() {
+  const el = this.mainTabContainer.nativeElement;
+  const active = el.querySelector('button.active') as HTMLElement;
+  if (active) {
+    this.mainIndicatorStyle = {
+      width: `${active.offsetWidth}px`,
+      left: `${active.offsetLeft}px`
+    };
+  }
+}
 
 @ViewChild('tabScrollContainer1', { static: false }) tabScrollContainer1!: ElementRef;
   @ViewChild('tabScrollContainer2', { static: false }) tabScrollContainer2!: ElementRef;
@@ -552,17 +579,6 @@ onTabChange(tab: string) {
   
 }
 
-  // scrollTabs(direction: 'left' | 'right', group: 'tab1' | 'tab2'): void {
-  //   const scrollContainer = group === 'tab1' 
-  //     ? this.tabScrollContainer1.nativeElement 
-  //     : this.tabScrollContainer2.nativeElement;
-
-  //   const scrollAmount = 150;
-  //   scrollContainer.scrollBy({
-  //     left: direction === 'left' ? -scrollAmount : scrollAmount,
-  //     behavior: 'smooth',
-  //   });
-  // }
 
   leftDisabledTab1 = true;
 rightDisabledTab1 = false;
@@ -605,4 +621,7 @@ updateScrollButtons(group: 'tab1' | 'tab2'): void {
       this.rightDisabledTab2 = isAtEnd;
     }
   }
+
+
+  
 }
