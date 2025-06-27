@@ -706,5 +706,40 @@ display: inline-block;
 .right-arrow {
   display: none;
 }
+}
+@media (max-width:1000px) {
+
+  .container {
+padding-left:10px;
+padding-right:10px;
+
+  }
+    .tabs {
+    padding-top: 0px;
+    margin-top: 20px;
+  }
+}
+@media (max-width:768px) {
+
+#test2 .swiper-btn, #test3 .swiper-btn{
+display:none;
+}
+
+.hide-arrow .swiper-btn {
+  display:block;
+}
+.swiper-btn {
+  right: -4px;
+  top: -36px;
+}
+.banner h1 {
+  font-size: 28px;
+}
+.banner {
+  padding-bottom:0px;
+}
+.banner p {
+  padding-bottom:5px;
+}
 
 }
