@@ -206,53 +206,59 @@ throw new Error('Method not implemented.');
   BestPractices: CarouselItem[] = [
     {
       title: 'Best Practices for Clean and High-Performance Angular Applications',
-      image: './bestpractices/Angular-Best-ractices.png',
+      image: './bestpractices/Angular-best-ractices.png',
       description: 'Provides tools for consistent branding across UI elements.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-Angular-Applications-v1.pdf',
     },
   
     {
       title: 'Best Practices for Clean and High-Performance React Applications',
-      image: './bestpractices/React-Best-Practices.png',
+      image: './bestpractices/React-best-practices.png',
       description: 'Standardized components for rapid UI development.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-React-Applications-v1.pdf',
     },
   
     {
       title: 'Best Practices for Clean and High-Performance Vue Applications',
-      image: './bestpractices/Vue-Best Practices.png',
+      image: './bestpractices/Vue-best-practices.png',
       description: 'Stay ahead with the latest UI design trends.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-Vue-Applications-v1.pdf',
     },
     {
       title: 'Best Practices for Clean and High-Performance JavaScript Applications',
-      image: './bestpractices/JavaScript-Best-Practices.png',
+      image: './bestpractices/JavaScript-best-practices.png',
       description: 'Keeps your designs aligned with the latest UX innovations.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-JavaScript-Applications-v1.pdf',
     },
        {
       title: 'Building a Clean and High-Performance TypeScript Applications',
-      image: './bestpractices/TypeScript-BestPractices.png',
+      image: './bestpractices/TypeScript-best-practices.png',
       description: 'Keeps your designs aligned with the latest UX innovations.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Buildinga-Clean-and-High-PerformanceTypeScript-Application-v1.pdf',
     },
     {
       title: 'Best Practices for Clean and High-Performance HTML Applications',
-      image: './bestpractices/HTML-Best-ractices.png',
+      image: './bestpractices/HTML-best-practices.png',
       description: 'Keeps your designs aligned with the latest UX innovations.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-HTML-Applications_v1.pdf',
     },
     {
       title: 'Best Practices for Clean and High-Performance CSS Applications',
-      image: './bestpractices/CSS-Best-Practices.png',
+      image: './bestpractices/CSS-best-practices.png',
       description: 'Establishes best practices for layouts, spacing, iconography, and usability.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-CSS-Applications-v1.pdf',
     },
     {
       title: 'Implementing Web Accessibility WCAG 2.1 AA and AAA levels',
-      image: './bestpractices/Accessibility-Best-Practices.png',
+      image: './bestpractices/Accessibility-best-practices.png',
       description: 'It ensures design consistency, clarity, defines principles, colors.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Implementing-Web-Accessibility-WCAG2.1-AA-AAA-levels-v1.pdf', 
+    },
+    {
+      title: 'Best Practices For Optimising Images in Web Applications',
+      image: './bestpractices/Optimising-images-best-practices.png',
+      description: 'It ensures design consistency, clarity, defines principles, colors.',
+      pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Optimizing-Images-in-Web-Applications-v1.pdf', 
     },
 
   ];
