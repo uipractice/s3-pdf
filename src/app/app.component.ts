@@ -206,33 +206,33 @@ throw new Error('Method not implemented.');
   BestPractices: CarouselItem[] = [
     {
       title: 'Best Practices for Clean and High-Performance Angular Applications',
-      image: './bestpractices/Angular-best-ractices.png',
+      image: './bestpractices/Angular-best-practices.png',
       description: 'Provides tools for consistent branding across UI elements.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-Angular-Applications-v1.pdf',
     },
   
     {
       title: 'Best Practices for Clean and High-Performance React Applications',
-      image: './bestpractices/React-best-practices.png',
+      image: './bestpractices/React-Best-Practices.png',
       description: 'Standardized components for rapid UI development.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-React-Applications-v1.pdf',
     },
   
     {
       title: 'Best Practices for Clean and High-Performance Vue Applications',
-      image: './bestpractices/Vue-best-practices.png',
+      image: './bestpractices/Vue-Best-Practices.png',
       description: 'Stay ahead with the latest UI design trends.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-Vue-Applications-v1.pdf',
     },
     {
       title: 'Best Practices for Clean and High-Performance JavaScript Applications',
-      image: './bestpractices/JavaScript-best-practices.png',
+      image: './bestpractices/JavaScript-Best-Practices.png',
       description: 'Keeps your designs aligned with the latest UX innovations.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-JavaScript-Applications-v1.pdf',
     },
        {
       title: 'Building a Clean and High-Performance TypeScript Applications',
-      image: './bestpractices/TypeScript-best-practices.png',
+      image: './bestpractices/TypeScript-BestPractices.png',
       description: 'Keeps your designs aligned with the latest UX innovations.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Buildinga-Clean-and-High-PerformanceTypeScript-Application-v1.pdf',
     },
@@ -244,22 +244,22 @@ throw new Error('Method not implemented.');
     },
     {
       title: 'Best Practices for Clean and High-Performance CSS Applications',
-      image: './bestpractices/CSS-best-practices.png',
+      image: './bestpractices/CSS-Best-Practices.png',
       description: 'Establishes best practices for layouts, spacing, iconography, and usability.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-CSS-Applications-v1.pdf',
     },
     {
       title: 'Implementing Web Accessibility WCAG 2.1 AA and AAA levels',
-      image: './bestpractices/Accessibility-best-practices.png',
+      image: './bestpractices/Accessibility-Best-Practices.png',
       description: 'It ensures design consistency, clarity, defines principles, colors.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Implementing-Web-Accessibility-WCAG2.1-AA-AAA-levels-v1.pdf', 
     },
-    {
+{
       title: 'Best Practices For Optimising Images in Web Applications',
-      image: './bestpractices/Optimising-images-best-practices.png',
+      image: './bestpractices/optimising-images-Best-Practices.png',
       description: 'It ensures design consistency, clarity, defines principles, colors.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Optimizing-Images-in-Web-Applications-v1.pdf', 
-    },
+    }
 
   ];
 
