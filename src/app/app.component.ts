@@ -256,7 +256,7 @@ throw new Error('Method not implemented.');
     },
 {
       title: 'Best Practices For Optimising Images in Web Applications',
-      image: './bestpractices/optimising-images-Best-Practices.png',
+      image: './bestpractices/Optimising-images-Best-Practices.png',
       description: 'It ensures design consistency, clarity, defines principles, colors.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Optimizing-Images-in-Web-Applications-v1.pdf', 
     }
