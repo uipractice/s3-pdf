@@ -220,7 +220,7 @@ throw new Error('Method not implemented.');
   
     {
       title: 'Best Practices for Clean and High-Performance Vue Applications',
-      image: './bestpractices/Vue-Best-Practices.png',
+      image: './bestpractices/Vue-best-practices.png',
       description: 'Stay ahead with the latest UI design trends.',
       pdfUrl: 'https://evoke-documentation-hub.s3.ap-south-1.amazonaws.com/UI-Practice/UI/Best-Practices-for-Clean-and-High-Performance-Vue-Applications-v1.pdf',
     },
