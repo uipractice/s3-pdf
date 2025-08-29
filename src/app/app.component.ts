@@ -1,7 +1,11 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild, inject, OnDestroy, ChangeDetectionStrategy, PLATFORM_ID } from '@angular/core';
 import { CarouselComponent } from './carousel/carousel.component';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 //import { SafeUrlPipe } from './pipes/safe-url.pipe';
+
+import { fromEvent, Subject } from 'rxjs';
+import { filter, takeUntil } from 'rxjs/operators';
+import { NavigationEnd, Router } from '@angular/router';
 
 interface CarouselItem {
   title: string;
@@ -20,9 +24,50 @@ interface CarouselItem {
   imports: [CarouselComponent, CommonModule,],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
 export class AppComponent {
+  private platformId = inject(PLATFORM_ID);
+  private router = inject(Router);
+  private destroy$ = new Subject<void>();
+
+  showTop = false;
+
+
 activeStickyTab: any;
+
+constructor() {
+    if (isPlatformBrowser(this.platformId)) {
+      // 1) Scroll to top on every successful navigation
+      this.router.events
+        .pipe(filter(e => e instanceof NavigationEnd), takeUntil(this.destroy$))
+        .subscribe(() => {
+          window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+        });
+
+      // 2) Toggle the "Back to top" button based on scroll position
+      fromEvent(window, 'scroll')
+        .pipe(takeUntil(this.destroy$))
+        .subscribe(() => {
+          this.showTop = window.scrollY > 300;
+        });
+    }
+  }
+
+  // Button action
+  scrollTop(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
+
+
 scrollToSection(arg0: string) {
 throw new Error('Method not implemented.');
 }
